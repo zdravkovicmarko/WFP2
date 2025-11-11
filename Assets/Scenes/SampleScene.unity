@@ -4769,7 +4769,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_MaterialPropertyBlockHelper: {fileID: 594377903}
-  m_ColorPropertyName: _BaseColor
+  m_ColorPropertyName: _RimColor
 --- !u!114 &594377903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11266,7 +11266,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3882723499750903505, guid: f9dc285126a7a584d8df9563b4dcd095, type: 3}
+  - {fileID: 2100000, guid: c30495ca2c8b8f6459582412f1e58de9, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
