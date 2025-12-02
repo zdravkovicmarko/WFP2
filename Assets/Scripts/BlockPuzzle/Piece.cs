@@ -20,6 +20,11 @@ public class Piece : MonoBehaviour
     [Header("Game")]
     public BlockPuzzleGame game;
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip correctClip;
+    public AudioClip wrongClip; 
+
     private Rigidbody rb;
 
     private bool isPlaced;
@@ -39,6 +44,9 @@ public class Piece : MonoBehaviour
         spawnRot = transform.rotation;
 
         rb.useGravity = true;
+
+        if (audioSource == null)
+        audioSource = GetComponent<AudioSource>();
 
         if (board == null)
         {
@@ -94,6 +102,7 @@ public class Piece : MonoBehaviour
         if (!TryGetAlignedCells(out var cells, out var tileWorlds))
         {
             //Debug.Log($"[DEBUG] {name}: alignment failed → ResetToSpawn()");
+            PlayWrongSound();
             ResetToSpawn();
             return;
         }
@@ -104,6 +113,7 @@ public class Piece : MonoBehaviour
         if (!board.CanPlaceCells(cells))
         {
             //Debug.Log($"[DEBUG] {name}: target cells occupied → ResetToSpawn()");
+            PlayWrongSound();
             ResetToSpawn();
             return;
         }
@@ -147,6 +157,8 @@ public class Piece : MonoBehaviour
         }
 
         //Debug.Log($"[DEBUG] {name}: SNAP COMPLETE at pivot cell ({cells[0].x}, {cells[0].y}).");
+
+        PlayCorrectSound();
 
         if (game != null)
         {
@@ -231,5 +243,17 @@ public class Piece : MonoBehaviour
     public void ForceResetToSpawn()
     {
         ResetToSpawn();
+    }
+
+    void PlayCorrectSound()
+    {
+        if (audioSource != null && correctClip != null)
+            audioSource.PlayOneShot(correctClip);
+    }
+
+    void PlayWrongSound()
+    {
+        if (audioSource != null && wrongClip != null)
+            audioSource.PlayOneShot(wrongClip);
     }
 }
