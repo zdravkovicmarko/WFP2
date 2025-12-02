@@ -8,17 +8,17 @@ public class Piece : MonoBehaviour
     public BoardManager board;
 
     [Header("Pivots / Shape")]
-    [Tooltip("List of pivot points that represent cube centers of this piece (p0..pN).")]
     public Transform[] pivotPoints;
 
-    [Tooltip("Max planar distance (XZ) between a pivot and tile center to still count as aligned.")]
     public float snapDistance = 0.25f;
 
-    [Tooltip("Local-space offset applied after snapping (use this to nudge the piece up/forward).")]
-    public Vector3 snapOffset = Vector3.zero;   // <-- NEW
+    public Vector3 snapOffset = Vector3.zero;
 
     [Header("XR")]
     public XRGrabInteractable grab;
+
+    [Header("Game")]
+    public BlockPuzzleGame game;
 
     private Rigidbody rb;
 
@@ -27,8 +27,6 @@ public class Piece : MonoBehaviour
 
     private Vector3 spawnPos;
     private Quaternion spawnRot;
-
-    // rotation of this piece relative to the board at design time
     private Quaternion initRotRelativeToBoard;
 
     void Awake()
@@ -90,22 +88,22 @@ public class Piece : MonoBehaviour
             return;
         }
 
-        Debug.Log($"[DEBUG] ----- TRY SNAP for {name} -----");
+        //Debug.Log($"[DEBUG] ----- TRY SNAP for {name} -----");
 
         // 1) Map pivots to tiles
         if (!TryGetAlignedCells(out var cells, out var tileWorlds))
         {
-            Debug.Log($"[DEBUG] {name}: alignment failed → ResetToSpawn()");
+            //Debug.Log($"[DEBUG] {name}: alignment failed → ResetToSpawn()");
             ResetToSpawn();
             return;
         }
 
-        Debug.Log($"[DEBUG] {name}: All cubes aligned & mapped to UNIQUE tiles → checking occupancy...");
+        //Debug.Log($"[DEBUG] {name}: All cubes aligned & mapped to UNIQUE tiles → checking occupancy...");
 
         // 2) Check occupancy
         if (!board.CanPlaceCells(cells))
         {
-            Debug.Log($"[DEBUG] {name}: target cells occupied → ResetToSpawn()");
+            //Debug.Log($"[DEBUG] {name}: target cells occupied → ResetToSpawn()");
             ResetToSpawn();
             return;
         }
@@ -145,10 +143,15 @@ public class Piece : MonoBehaviour
                 new Vector2(w.x, w.z),
                 new Vector2(tw.x, tw.z)
             );
-            Debug.Log($"[DEBUG] {name}: post-snap error for cube '{p.name}' = {err:F4}");
+            //Debug.Log($"[DEBUG] {name}: post-snap error for cube '{p.name}' = {err:F4}");
         }
 
-        Debug.Log($"[DEBUG] {name}: SNAP COMPLETE at pivot cell ({cells[0].x}, {cells[0].y}).");
+        //Debug.Log($"[DEBUG] {name}: SNAP COMPLETE at pivot cell ({cells[0].x}, {cells[0].y}).");
+
+        if (game != null)
+        {
+            game.OnPieceSnapped(this);
+        }
     }
 
     void ResetToSpawn()
@@ -163,11 +166,6 @@ public class Piece : MonoBehaviour
         isPlaced = false;
     }
 
-    /// <summary>
-    /// For the current pose, try to map each pivot to a unique board tile.
-    /// Fails if any pivot is too far from its nearest tile or if two pivots
-    /// would land on the same tile.
-    /// </summary>
     bool TryGetAlignedCells(out Vector2Int[] cells, out Vector3[] tileWorlds)
     {
         cells = null;
@@ -182,7 +180,7 @@ public class Piece : MonoBehaviour
 
         var used = new System.Collections.Generic.HashSet<Vector2Int>();
 
-        Debug.Log($"[DEBUG] {name}: Checking {n} cube points...");
+        //Debug.Log($"[DEBUG] {name}: Checking {n} cube points...");
 
         for (int i = 0; i < n; i++)
         {
@@ -208,10 +206,7 @@ public class Piece : MonoBehaviour
                 new Vector2(tileWorld.x, tileWorld.z)
             );
 
-            Debug.Log(
-                $"[DEBUG] {name}: Cube '{p.name}' world {worldPos} → " +
-                $"tile (x={cell.x}, y={cell.y}) at {tileWorld}, planarDist={planarDist:F3}"
-            );
+            //Debug.Log($"[DEBUG] {name}: Cube '{p.name}' world {worldPos} → " + $"tile (x={cell.x}, y={cell.y}) at {tileWorld}, planarDist={planarDist:F3}");
 
             if (planarDist > snapDistance)
             {
@@ -231,5 +226,10 @@ public class Piece : MonoBehaviour
         }
 
         return true;
+    }
+
+    public void ForceResetToSpawn()
+    {
+        ResetToSpawn();
     }
 }

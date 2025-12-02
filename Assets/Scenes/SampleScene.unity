@@ -3331,6 +3331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223615172}
+  - component: {fileID: 223615173}
   m_Layer: 0
   m_Name: Zig Zag Block Puzzle
   m_TagString: Untagged
@@ -3361,6 +3362,26 @@ Transform:
   - {fileID: 229551136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &223615173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 223615171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b3cecd46c94a88448652f201a20fc70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  board: {fileID: 1093068647}
+  pieces:
+  - {fileID: 1894235256}
+  - {fileID: 1984409251}
+  - {fileID: 1511206390}
+  - {fileID: 1131560030}
+  - {fileID: 2069447987}
+  - {fileID: 229551142}
 --- !u!1 &225265256
 GameObject:
   m_ObjectHideFlags: 0
@@ -3868,6 +3889,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.045, y: -0.055, z: 0.06}
   grab: {fileID: 229551140}
+  game: {fileID: 223615173}
 --- !u!1 &235760494
 GameObject:
   m_ObjectHideFlags: 0
@@ -17522,6 +17544,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.11, y: -0.06, z: 0.06}
   grab: {fileID: 1131560028}
+  game: {fileID: 223615173}
 --- !u!1 &1134316765
 GameObject:
   m_ObjectHideFlags: 0
@@ -24093,6 +24116,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0, y: 0, z: 0.06}
   grab: {fileID: 1511206388}
+  game: {fileID: 223615173}
 --- !u!1 &1519903113
 GameObject:
   m_ObjectHideFlags: 0
@@ -29720,6 +29744,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: -0.0095, y: 0.06, z: 0.06}
   grab: {fileID: 1894235254}
+  game: {fileID: 223615173}
 --- !u!1 &1896161536
 GameObject:
   m_ObjectHideFlags: 0
@@ -31063,6 +31088,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.065, y: -0.06, z: 0.06}
   grab: {fileID: 1984409245}
+  game: {fileID: 223615173}
 --- !u!1 &1984441458
 GameObject:
   m_ObjectHideFlags: 0
@@ -32717,6 +32743,7 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.11, y: 0.04, z: 0.06}
   grab: {fileID: 2069447985}
+  game: {fileID: 223615173}
 --- !u!1 &2078959960
 GameObject:
   m_ObjectHideFlags: 0

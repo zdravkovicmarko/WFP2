@@ -12,7 +12,6 @@ public class BoardManager : MonoBehaviour
     private SnapTile[,] grid;
     private bool[,] occupied;
 
-    // NEW: world-space 2D bounds of the board (on X/Y plane)
     [HideInInspector] public Vector2 boardMin;
     [HideInInspector] public Vector2 boardMax;
 
@@ -36,7 +35,7 @@ public class BoardManager : MonoBehaviour
 
             grid[t.x, t.y] = t;
 
-            Debug.Log($"[BOARD] Tile ({t.x},{t.y}) '{t.name}' at world {t.transform.position}");
+            //Debug.Log($"[BOARD] Tile ({t.x},{t.y}) '{t.name}' at world {t.transform.position}");
 
             // Track board extents based on tile centers
             Vector3 p = t.transform.position;
@@ -160,10 +159,45 @@ public class BoardManager : MonoBehaviour
         }
     }
 
-    // OPTIONAL helper if you want:
     public bool IsInsideBoardBounds(Vector2 pos)
     {
         return pos.x >= boardMin.x && pos.x <= boardMax.x &&
                pos.y >= boardMin.y && pos.y <= boardMax.y;
+    }
+
+    public void ClearOccupancy()
+    {
+        if (occupied != null)
+        {
+            System.Array.Clear(occupied, 0, occupied.Length);
+        }
+    }
+
+    public bool AreAllPlayableTilesOccupied()
+    {
+        for (int x = 0; x < columns; x++)
+        {
+            for (int y = 0; y < rows; y++)
+            {
+                // Only count tiles that really exist (grid[x,y] != null).
+                if (grid[x, y] != null && !occupied[x, y])
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    public int CountOccupiedPlayableTiles()
+    {
+        int count = 0;
+        for (int x = 0; x < columns; x++)
+        {
+            for (int y = 0; y < rows; y++)
+            {
+                if (grid[x, y] != null && occupied[x, y])
+                    count++;
+            }
+        }
+        return count;
     }
 }
