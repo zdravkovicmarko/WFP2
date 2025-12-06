@@ -123,6 +123,8 @@ public class Piece : MonoBehaviour
         board.SetOccupiedCells(cells, true);
         isPlaced = true;
 
+        board.OnPiecePlaced();
+
         // 4) Final rotation: "flat" relative to board, like your prefab
         Quaternion finalRot = board.transform.rotation * initRotRelativeToBoard;
 

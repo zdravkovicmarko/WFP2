@@ -6,8 +6,15 @@ public class BlockPuzzleGame : MonoBehaviour
     public BoardManager board;
     public Piece[] pieces;
 
-    void Start()
+    void OnEnable()
     {
+        ResetPuzzle();
+    }
+
+    private void ResetPuzzle()
+    {
+        Debug.Log("[GAME] Puzzle RESET triggered (OnEnable).");
+
         // 1) Clear tile occupancy
         if (board != null)
             board.ClearOccupancy();
@@ -18,10 +25,9 @@ public class BlockPuzzleGame : MonoBehaviour
             foreach (var p in pieces)
             {
                 if (p == null) continue;
-                p.ForceResetToSpawn();
+                p.ForceResetToSpawn();   // perfect for this use case
             }
         }
-
     }
 
     public void OnPieceSnapped(Piece piece)

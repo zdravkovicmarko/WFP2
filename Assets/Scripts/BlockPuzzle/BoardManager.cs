@@ -5,6 +5,7 @@ public class BoardManager : MonoBehaviour
     [Header("Board Size")]
     public int columns = 5;
     public int rows    = 5;
+    public RoomTeleporter endGameTeleporter;
 
     [Header("Tiles (assign all Tile_ x_y objects)")]
     public SnapTile[] tiles;
@@ -199,5 +200,32 @@ public class BoardManager : MonoBehaviour
             }
         }
         return count;
+    }
+
+    public bool IsBoardFull()
+    {
+        for (int x = 0; x < columns; x++)
+        {
+            for (int y = 0; y < rows; y++)
+            {
+                if (!occupied[x, y])
+                    return false;
+            }
+        }
+        return true;
+    }
+
+    // Call this after each successful piece placement
+    public void OnPiecePlaced()
+    {
+        if (IsBoardFull())
+        {
+            Debug.Log("[BOARD] All tiles are occupied → puzzle complete!");
+            if (endGameTeleporter != null)
+            {
+                // Use preset delay on teleporter, e.g. 3 seconds
+                endGameTeleporter.TeleportWithDefaultDelay();
+            }
+        }
     }
 }
