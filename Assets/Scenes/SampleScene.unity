@@ -3058,6 +3058,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 69493024}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 69493027}
   m_SourcePrefab: {fileID: 100100000, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
 --- !u!4 &69493022 stripped
 Transform:
@@ -3116,7 +3119,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 69493027}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -3189,6 +3204,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &69493027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 69493023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &73091244
 GameObject:
   m_ObjectHideFlags: 0
@@ -5028,6 +5056,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 134099804}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134099807}
   m_SourcePrefab: {fileID: 100100000, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
 --- !u!4 &134099802 stripped
 Transform:
@@ -5086,7 +5117,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 134099807}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -5159,6 +5202,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &134099807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134099803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &134747303
 GameObject:
   m_ObjectHideFlags: 0
@@ -15681,6 +15737,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 333001395}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 333001398}
   m_SourcePrefab: {fileID: 100100000, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
 --- !u!4 &333001393 stripped
 Transform:
@@ -15739,7 +15798,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 333001398}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -15812,6 +15883,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &333001398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 333001394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &334086708
 GameObject:
   m_ObjectHideFlags: 0
@@ -16205,6 +16289,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 345338772}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 345338775}
   m_SourcePrefab: {fileID: 100100000, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
 --- !u!4 &345338770 stripped
 Transform:
@@ -16263,7 +16350,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 345338775}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -16336,6 +16435,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: -0.000000029802322, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &345338775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 345338771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &345713061
 GameObject:
   m_ObjectHideFlags: 0
@@ -27239,6 +27351,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
       insertIndex: -1
       addedObject: {fileID: 612468748}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 612468751}
   m_SourcePrefab: {fileID: 100100000, guid: 238766482864479459a0a5d13c65bcfe, type: 3}
 --- !u!4 &612468746 stripped
 Transform:
@@ -27297,7 +27412,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 612468751}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -27370,6 +27497,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &612468751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612468747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &613466306
 GameObject:
   m_ObjectHideFlags: 0
@@ -36420,6 +36560,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 811736303}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 811736306}
   m_SourcePrefab: {fileID: 100100000, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
 --- !u!4 &811736301 stripped
 Transform:
@@ -36478,7 +36621,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 811736306}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -36551,6 +36706,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &811736306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811736302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &813117821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ef617531f6f01f43b5331f9fa6de3c9, type: 3}
@@ -43661,6 +43829,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1012214368}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1012214371}
   m_SourcePrefab: {fileID: 100100000, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
 --- !u!4 &1012214366 stripped
 Transform:
@@ -43719,7 +43890,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1012214371}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -43792,6 +43975,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: -0.000000029802322, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1012214371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1012214367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1001 &1013615773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44116,6 +44312,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1017917721}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1017917724}
   m_SourcePrefab: {fileID: 100100000, guid: 4e6a6f84675d40e4881731fa44ddb69e, type: 3}
 --- !u!4 &1017917719 stripped
 Transform:
@@ -44174,7 +44373,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1017917724}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -44247,6 +44458,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &1017917724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1017917720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1018353353
 GameObject:
   m_ObjectHideFlags: 0
@@ -52149,7 +52373,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       propertyPath: m_LocalRotation.y
@@ -52196,6 +52420,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1231864983}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1231864986}
   m_SourcePrefab: {fileID: 100100000, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
 --- !u!4 &1231864981 stripped
 Transform:
@@ -52254,7 +52481,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1231864986}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -52327,6 +52566,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &1231864986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1231864982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1237089973
 GameObject:
   m_ObjectHideFlags: 0
@@ -52800,6 +53052,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1243625178}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1243625181}
   m_SourcePrefab: {fileID: 100100000, guid: bc76fb36daea7044abbf254d2d1a1849, type: 3}
 --- !u!4 &1243625176 stripped
 Transform:
@@ -52858,7 +53113,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1243625181}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -52931,6 +53198,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1243625181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1243625177}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1243838585
 GameObject:
   m_ObjectHideFlags: 0
@@ -54274,6 +54554,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1277373442}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1277373445}
   m_SourcePrefab: {fileID: 100100000, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
 --- !u!4 &1277373440 stripped
 Transform:
@@ -54332,7 +54615,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1277373445}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -54405,6 +54700,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1277373445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277373441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!4 &1277723421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3222391660731057103, guid: 3d032f5481d2826478451895128a76f4, type: 3}
@@ -60194,7 +60502,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d67f5aaab540859438c42a1fa6163b79, type: 2}
+  - {fileID: 2100000, guid: 49064904b6529ab4cb8c568a8a59d240, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -60223,7 +60531,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389725745}
-  m_Mesh: {fileID: -3763986419696749695, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
+  m_Mesh: {fileID: 2020078356055298879, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
 --- !u!1 &1390846723
 GameObject:
   m_ObjectHideFlags: 0
@@ -61474,7 +61782,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d67f5aaab540859438c42a1fa6163b79, type: 2}
+  - {fileID: 2100000, guid: 49064904b6529ab4cb8c568a8a59d240, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -61503,7 +61811,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1414744134}
-  m_Mesh: {fileID: -3763986419696749695, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
+  m_Mesh: {fileID: 2020078356055298879, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
 --- !u!1 &1415576247
 GameObject:
   m_ObjectHideFlags: 0
@@ -66153,6 +66461,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1496442855}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1496442858}
   m_SourcePrefab: {fileID: 100100000, guid: 2d943b2873e671e42a2e7e214bb84c68, type: 3}
 --- !u!4 &1496442853 stripped
 Transform:
@@ -66211,7 +66522,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1496442858}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -66284,6 +66607,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1496442858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1496442854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1496873812
 GameObject:
   m_ObjectHideFlags: 0
@@ -66884,6 +67220,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1504988864}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1504988867}
   m_SourcePrefab: {fileID: 100100000, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
 --- !u!4 &1504988862 stripped
 Transform:
@@ -66942,7 +67281,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1504988867}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -67015,6 +67366,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1504988867
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504988863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1505117072
 GameObject:
   m_ObjectHideFlags: 0
@@ -72752,6 +73116,135 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1618185598}
   m_CullTransparentMesh: 1
+--- !u!1 &1618743260
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1618743262}
+  - component: {fileID: 1618743261}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &1618743261
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618743260}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 0.25
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 0.2
+  MaxDistance: 3
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &1618743262
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618743260}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.25, y: 0, z: 0.625}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2042138244}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1621587130
 GameObject:
   m_ObjectHideFlags: 0
@@ -75933,6 +76426,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1699463020}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1699463023}
   m_SourcePrefab: {fileID: 100100000, guid: cc80f0cebed1ec64f96edb8e91e2a82d, type: 3}
 --- !u!4 &1699463018 stripped
 Transform:
@@ -75991,7 +76487,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1699463023}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -76064,6 +76572,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: -0.000000029802322, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1699463023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699463019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1702963519
 GameObject:
   m_ObjectHideFlags: 0
@@ -77009,6 +77530,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1723519942}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1723519945}
   m_SourcePrefab: {fileID: 100100000, guid: c5736bd286ad71a479605d9d40a2d1f8, type: 3}
 --- !u!4 &1723519940 stripped
 Transform:
@@ -77067,7 +77591,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1723519945}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -77140,6 +77676,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1723519945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723519941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1724594183
 GameObject:
   m_ObjectHideFlags: 0
@@ -78798,6 +79347,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1760544040}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1760544043}
   m_SourcePrefab: {fileID: 100100000, guid: 7038a558fd9348f428431720ac4ca5c9, type: 3}
 --- !u!4 &1760544038 stripped
 Transform:
@@ -78856,7 +79408,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1760544043}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -78929,6 +79493,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &1760544043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1760544039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1760701143
 GameObject:
   m_ObjectHideFlags: 0
@@ -82322,7 +82899,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       propertyPath: m_LocalRotation.y
@@ -82369,6 +82946,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1860659248}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1860659251}
   m_SourcePrefab: {fileID: 100100000, guid: 3dba3514120dfdd44b542892b57cd744, type: 3}
 --- !u!4 &1860659246 stripped
 Transform:
@@ -82427,7 +83007,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1860659251}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -82500,6 +83092,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.00000000704173, z: 0.00025000097}
+--- !u!114 &1860659251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860659247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &1862240919
 GameObject:
   m_ObjectHideFlags: 0
@@ -91622,6 +92227,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2042138244}
+  - component: {fileID: 2042138245}
   m_Layer: 0
   m_Name: Memory
   m_TagString: Untagged
@@ -91644,8 +92250,27 @@ Transform:
   m_Children:
   - {fileID: 1183740985}
   - {fileID: 1457499461}
+  - {fileID: 1618743262}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &2042138245
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2042138243}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 846dc31bf727b4f4d8ccc45f51d6acaf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardsParent: {fileID: 1457499461}
+  endGameTeleporter: {fileID: 166963590}
+  totalPairs: 9
+  audioSource: {fileID: 1618743261}
+  correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
+  wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
 --- !u!1 &2046629158
 GameObject:
   m_ObjectHideFlags: 0
@@ -94804,6 +95429,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2118552721}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2118552724}
   m_SourcePrefab: {fileID: 100100000, guid: acc4ed2c53b4deb42a88a930c448dcfa, type: 3}
 --- !u!4 &2118552719 stripped
 Transform:
@@ -94862,7 +95490,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2118552724}
+        m_TargetAssemblyTypeName: MemoryCard, Assembly-CSharp
+        m_MethodName: OnSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -94935,6 +95575,19 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.0040000016, y: 0.0050215875, z: 0.0005000013}
   m_Center: {x: 0, y: 0.0000000033164396, z: 0.00025000004}
+--- !u!114 &2118552724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118552720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eda1bb7f40974b640b9fd59004288bca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactable: {fileID: 0}
 --- !u!1 &2123163515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a7c18935a76e657489fa0b247a5b6f0d, type: 3}
