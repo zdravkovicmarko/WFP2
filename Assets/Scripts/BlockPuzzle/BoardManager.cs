@@ -5,18 +5,21 @@ public class BoardManager : MonoBehaviour
 {
     [Header("Board Size")]
     public int columns = 5;
-    public int rows    = 5;
-    public RoomTeleporter endGameTeleporter;
-    public Image image;
+    public int rows = 5;
 
-    [Header("Tiles (assign all Tile_ x_y objects)")]
-    public SnapTile[] tiles;
+    [Header("Puzzle Refs")]
+    public SnapTile[] tiles;              // assign all Tile_x_y
+    public Piece[] pieces;                // assign all block pieces here
+    public RoomTeleporter endGameTeleporter;
+    public Image image;                   // final picture to show on complete
 
     private SnapTile[,] grid;
     private bool[,] occupied;
 
     [HideInInspector] public Vector2 boardMin;
     [HideInInspector] public Vector2 boardMax;
+
+    // ----------------- LIFECYCLE -----------------
 
     void Awake()
     {
@@ -38,9 +41,6 @@ public class BoardManager : MonoBehaviour
 
             grid[t.x, t.y] = t;
 
-            //Debug.Log($"[BOARD] Tile ({t.x},{t.y}) '{t.name}' at world {t.transform.position}");
-
-            // Track board extents based on tile centers
             Vector3 p = t.transform.position;
             if (p.x < minX) minX = p.x;
             if (p.x > maxX) maxX = p.x;
@@ -81,32 +81,49 @@ public class BoardManager : MonoBehaviour
         boardMax = new Vector2(maxX + halfCell, maxY + halfCell);
     }
 
+    // Called when the minigame object is enabled (e.g. teleport into room)
+    void OnEnable()
+    {
+        ResetPuzzle();
+    }
+
+    // ----------------- RESET / INIT -----------------
+
+    public void ResetPuzzle()
+    {
+        Debug.Log("[GAME] Puzzle RESET triggered (BoardManager.OnEnable).");
+
+        // 1) Clear tile occupancy
+        ClearOccupancy();
+
+        // 2) Reset all pieces to their spawn pose
+        if (pieces != null)
+        {
+            foreach (var p in pieces)
+            {
+                if (p == null) continue;
+                p.ForceResetToSpawn();
+            }
+        }
+
+        // 3) Hide the final image (if any)
+        if (image != null)
+            image.gameObject.SetActive(false);
+    }
+
+    public void ClearOccupancy()
+    {
+        if (occupied != null)
+            System.Array.Clear(occupied, 0, occupied.Length);
+    }
+
+    // ----------------- GRID HELPERS -----------------
+
     public bool InBounds(Vector2Int c) =>
         c.x >= 0 && c.x < columns && c.y >= 0 && c.y < rows;
 
     public bool IsFree(Vector2Int c) =>
         InBounds(c) && grid[c.x, c.y] != null && !occupied[c.x, c.y];
-
-    public bool CanPlace(Vector2Int pivot, Vector2Int[] offsets)
-    {
-        foreach (var o in offsets)
-        {
-            var c = pivot + o;
-            if (!IsFree(c))
-                return false;
-        }
-        return true;
-    }
-
-    public void SetOccupied(Vector2Int pivot, Vector2Int[] offsets, bool value)
-    {
-        foreach (var o in offsets)
-        {
-            var c = pivot + o;
-            if (InBounds(c))
-                occupied[c.x, c.y] = value;
-        }
-    }
 
     public Vector3 GetTilePosition(Vector2Int cell)
     {
@@ -168,13 +185,7 @@ public class BoardManager : MonoBehaviour
                pos.y >= boardMin.y && pos.y <= boardMax.y;
     }
 
-    public void ClearOccupancy()
-    {
-        if (occupied != null)
-        {
-            System.Array.Clear(occupied, 0, occupied.Length);
-        }
-    }
+    // ----------------- PUZZLE PROGRESS -----------------
 
     public bool AreAllPlayableTilesOccupied()
     {
@@ -204,31 +215,23 @@ public class BoardManager : MonoBehaviour
         return count;
     }
 
-    public bool IsBoardFull()
-    {
-        for (int x = 0; x < columns; x++)
-        {
-            for (int y = 0; y < rows; y++)
-            {
-                if (!occupied[x, y])
-                    return false;
-            }
-        }
-        return true;
-    }
+    // ----------------- HOOK FROM PIECE -----------------
 
-    // Call this after each successful piece placement
+    // Call this after each successful piece placement (already done in Piece)
     public void OnPiecePlaced()
     {
-        if (IsBoardFull())
+        int used = CountOccupiedPlayableTiles();
+        Debug.Log($"[BOARD] OnPiecePlaced → {used} occupied playable tiles.");
+
+        if (AreAllPlayableTilesOccupied())
         {
-            Debug.Log("[BOARD] All tiles are occupied → puzzle complete!");
-            image.gameObject.SetActive(true);
+            //Debug.Log("[BOARD] All playable tiles are occupied → puzzle complete!");
+
+            if (image != null)
+                image.gameObject.SetActive(true);
+
             if (endGameTeleporter != null)
-            {
-                // Use preset delay on teleporter, e.g. 3 seconds
                 endGameTeleporter.TeleportWithDefaultDelay();
-            }
         }
     }
 }

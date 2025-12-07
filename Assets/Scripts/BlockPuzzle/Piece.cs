@@ -17,9 +17,6 @@ public class Piece : MonoBehaviour
     [Header("XR")]
     public XRGrabInteractable grab;
 
-    [Header("Game")]
-    public BlockPuzzleGame game;
-
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip correctClip;
@@ -187,11 +184,6 @@ public class Piece : MonoBehaviour
         //Debug.Log($"[DEBUG] {name}: SNAP COMPLETE at pivot cell ({cells[0].x}, {cells[0].y}).");
 
         PlayCorrectSound();
-
-        if (game != null)
-        {
-            game.OnPieceSnapped(this);
-        }
     }
 
     void ResetToSpawn()

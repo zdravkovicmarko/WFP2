@@ -11067,14 +11067,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 223615172}
-  - component: {fileID: 223615173}
   m_Layer: 0
   m_Name: Block Puzzle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &223615172
 Transform:
   m_ObjectHideFlags: 0
@@ -11098,26 +11097,6 @@ Transform:
   - {fileID: 229551136}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &223615173
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 223615171}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b3cecd46c94a88448652f201a20fc70, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  board: {fileID: 1093068647}
-  pieces:
-  - {fileID: 1894235256}
-  - {fileID: 1984409251}
-  - {fileID: 1511206390}
-  - {fileID: 1131560030}
-  - {fileID: 2069447987}
-  - {fileID: 229551142}
 --- !u!1 &225265256
 GameObject:
   m_ObjectHideFlags: 0
@@ -11697,7 +11676,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.045, y: -0.055, z: 0.06}
   grab: {fileID: 229551140}
-  game: {fileID: 223615173}
   audioSource: {fileID: 229551143}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
@@ -46809,8 +46787,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   columns: 5
   rows: 5
-  endGameTeleporter: {fileID: 166963590}
-  image: {fileID: 1308831109}
   tiles:
   - {fileID: 187430254}
   - {fileID: 927946491}
@@ -46837,6 +46813,15 @@ MonoBehaviour:
   - {fileID: 1138526068}
   - {fileID: 1556220362}
   - {fileID: 1030725656}
+  pieces:
+  - {fileID: 1894235256}
+  - {fileID: 1984409251}
+  - {fileID: 1511206390}
+  - {fileID: 1131560030}
+  - {fileID: 2069447987}
+  - {fileID: 229551142}
+  endGameTeleporter: {fileID: 166963590}
+  image: {fileID: 1308831109}
   boardMin: {x: 0, y: 0}
   boardMax: {x: 0, y: 0}
 --- !u!1 &1094612058
@@ -47918,7 +47903,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.11, y: -0.06, z: 0.06}
   grab: {fileID: 1131560028}
-  game: {fileID: 223615173}
   audioSource: {fileID: 1131560031}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
@@ -68574,7 +68558,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0, y: 0, z: 0.06}
   grab: {fileID: 1511206388}
-  game: {fileID: 223615173}
   audioSource: {fileID: 1511206391}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
@@ -86117,7 +86100,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: -0.0095, y: 0.06, z: 0.06}
   grab: {fileID: 1894235254}
-  game: {fileID: 223615173}
   audioSource: {fileID: 1894235257}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
@@ -89345,7 +89327,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.065, y: -0.06, z: 0.06}
   grab: {fileID: 1984409245}
-  game: {fileID: 223615173}
   audioSource: {fileID: 1984409252}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
@@ -93602,7 +93583,6 @@ MonoBehaviour:
   snapDistance: 0.25
   snapOffset: {x: 0.11, y: 0.04, z: 0.06}
   grab: {fileID: 2069447985}
-  game: {fileID: 223615173}
   audioSource: {fileID: 2069447988}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
