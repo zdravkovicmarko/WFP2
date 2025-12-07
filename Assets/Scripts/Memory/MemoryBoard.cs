@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MemoryBoard : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class MemoryBoard : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip correctClip;
     public AudioClip wrongClip; 
+
+    public Image image;
 
     private readonly List<Transform>   cardTransforms = new List<Transform>();
     private readonly List<Vector3>     slotPositions  = new List<Vector3>();
@@ -105,6 +108,7 @@ public class MemoryBoard : MonoBehaviour
             {
                 gameFinished = true;
                 Debug.Log("[MEMORY] All pairs found → puzzle complete!");
+                image.gameObject.SetActive(true);
                 if (endGameTeleporter != null)
                 {
                     endGameTeleporter.TeleportWithDefaultDelay();

@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BoardManager : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class BoardManager : MonoBehaviour
     public int columns = 5;
     public int rows    = 5;
     public RoomTeleporter endGameTeleporter;
+    public Image image;
 
     [Header("Tiles (assign all Tile_ x_y objects)")]
     public SnapTile[] tiles;
@@ -221,6 +223,7 @@ public class BoardManager : MonoBehaviour
         if (IsBoardFull())
         {
             Debug.Log("[BOARD] All tiles are occupied → puzzle complete!");
+            image.gameObject.SetActive(true);
             if (endGameTeleporter != null)
             {
                 // Use preset delay on teleporter, e.g. 3 seconds
