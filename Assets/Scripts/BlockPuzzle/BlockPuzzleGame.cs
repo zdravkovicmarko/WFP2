@@ -25,7 +25,7 @@ public class BlockPuzzleGame : MonoBehaviour
             foreach (var p in pieces)
             {
                 if (p == null) continue;
-                p.ForceResetToSpawn();   // perfect for this use case
+                p.ForceResetToSpawn();
             }
         }
     }

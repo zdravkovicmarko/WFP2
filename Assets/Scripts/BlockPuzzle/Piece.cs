@@ -25,6 +25,9 @@ public class Piece : MonoBehaviour
     public AudioClip correctClip;
     public AudioClip wrongClip; 
 
+    public float autoResetDistanceFromSpawn = 0.75f;
+    public bool enableAutoReset = true;
+
     private Rigidbody rb;
 
     private bool isPlaced;
@@ -61,6 +64,28 @@ public class Piece : MonoBehaviour
         grab.selectExited.AddListener(_ => OnRelease());
     }
 
+    void Update()
+    {
+        // Auto-reset logic for pieces that got knocked away / fell off
+        if (!enableAutoReset)
+            return;
+
+        // Do not auto-reset while placed or while player is holding it
+        if (isPlaced)
+            return;
+
+        if (grab != null && grab.isSelected)
+            return;
+
+        // If piece has drifted far enough from its original spawn position, reset it
+        float distFromSpawn = Vector3.Distance(transform.position, spawnPos);
+        if (distFromSpawn > autoResetDistanceFromSpawn)
+        {
+            PlayWrongSound();
+            ResetToSpawn();
+        }
+    }
+
     void OnDestroy()
     {
         if (grab != null)
@@ -92,6 +117,7 @@ public class Piece : MonoBehaviour
     {
         if (board == null || pivotPoints == null || pivotPoints.Length == 0)
         {
+            PlayWrongSound();
             ResetToSpawn();
             return;
         }
