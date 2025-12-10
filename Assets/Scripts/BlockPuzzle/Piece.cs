@@ -63,18 +63,15 @@ public class Piece : MonoBehaviour
 
     void Update()
     {
-        // Auto-reset logic for pieces that got knocked away / fell off
         if (!enableAutoReset)
             return;
 
-        // Do not auto-reset while placed or while player is holding it
         if (isPlaced)
             return;
 
         if (grab != null && grab.isSelected)
             return;
 
-        // If piece has drifted far enough from its original spawn position, reset it
         float distFromSpawn = Vector3.Distance(transform.position, spawnPos);
         if (distFromSpawn > autoResetDistanceFromSpawn)
         {
@@ -121,7 +118,6 @@ public class Piece : MonoBehaviour
 
         //Debug.Log($"[DEBUG] ----- TRY SNAP for {name} -----");
 
-        // 1) Map pivots to tiles
         if (!TryGetAlignedCells(out var cells, out var tileWorlds))
         {
             //Debug.Log($"[DEBUG] {name}: alignment failed → ResetToSpawn()");
@@ -132,7 +128,6 @@ public class Piece : MonoBehaviour
 
         //Debug.Log($"[DEBUG] {name}: All cubes aligned & mapped to UNIQUE tiles → checking occupancy...");
 
-        // 2) Check occupancy
         if (!board.CanPlaceCells(cells))
         {
             //Debug.Log($"[DEBUG] {name}: target cells occupied → ResetToSpawn()");
@@ -141,25 +136,20 @@ public class Piece : MonoBehaviour
             return;
         }
 
-        // 3) Occupy cells
         lastCells = cells;
         board.SetOccupiedCells(cells, true);
         isPlaced = true;
 
         board.OnPiecePlaced();
 
-        // 4) Final rotation: "flat" relative to board, like your prefab
         Quaternion finalRot = board.transform.rotation * initRotRelativeToBoard;
 
-        // 5) Anchor = pivotPoints[0]
         Transform anchorPivot = pivotPoints[0];
         Vector3 localAnchor = transform.InverseTransformPoint(anchorPivot.position);
         Vector3 targetAnchorWorld = tileWorlds[0];
 
-        // piecePos = tilePos0 - finalRot * localAnchor + finalRot * snapOffset
-        Vector3 finalPos = targetAnchorWorld - finalRot * localAnchor + finalRot * snapOffset; // <-- offset added
+        Vector3 finalPos = targetAnchorWorld - finalRot * localAnchor + finalRot * snapOffset;
 
-        // 6) Apply transform / freeze physics
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.useGravity = false;
@@ -167,7 +157,6 @@ public class Piece : MonoBehaviour
 
         transform.SetPositionAndRotation(finalPos, finalRot);
 
-        // 7) Debug: post-snap error in XZ plane
         for (int i = 0; i < pivotPoints.Length; i++)
         {
             Transform p = pivotPoints[i];

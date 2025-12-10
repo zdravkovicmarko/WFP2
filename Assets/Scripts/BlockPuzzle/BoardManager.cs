@@ -8,10 +8,10 @@ public class BoardManager : MonoBehaviour
     public int rows = 5;
 
     [Header("Puzzle Refs")]
-    public SnapTile[] tiles;              // assign all Tile_x_y
-    public Piece[] pieces;                // assign all block pieces here
+    public SnapTile[] tiles;
+    public Piece[] pieces; 
     public RoomTeleporter endGameTeleporter;
-    public Image image;                   // final picture to show on complete
+    public Image image; 
 
     private SnapTile[,] grid;
     private bool[,] occupied;
@@ -19,7 +19,6 @@ public class BoardManager : MonoBehaviour
     [HideInInspector] public Vector2 boardMin;
     [HideInInspector] public Vector2 boardMax;
 
-    // ----------------- LIFECYCLE -----------------
 
     void Awake()
     {
@@ -48,7 +47,6 @@ public class BoardManager : MonoBehaviour
             if (p.y > maxY) maxY = p.y;
         }
 
-        // Approximate cell size from any two tiles in a row/column
         float spacing = 0f;
         for (int i = 0; i < tiles.Length; i++)
         {
@@ -58,13 +56,11 @@ public class BoardManager : MonoBehaviour
                 var b = tiles[j];
                 if (a == null || b == null) continue;
 
-                // same row -> horizontal spacing
                 if (a.y == b.y && a.x != b.x)
                 {
                     spacing = Mathf.Abs(a.transform.position.x - b.transform.position.x);
                     break;
                 }
-                // same column -> vertical spacing
                 if (a.x == b.x && a.y != b.y)
                 {
                     spacing = Mathf.Abs(a.transform.position.y - b.transform.position.y);
@@ -76,27 +72,22 @@ public class BoardManager : MonoBehaviour
 
         float halfCell = (spacing > 0f ? spacing * 0.5f : 0.25f);
 
-        // Board bounds = outermost tile centers ± half a cell
         boardMin = new Vector2(minX - halfCell, minY - halfCell);
         boardMax = new Vector2(maxX + halfCell, maxY + halfCell);
     }
 
-    // Called when the minigame object is enabled (e.g. teleport into room)
     void OnEnable()
     {
         ResetPuzzle();
     }
 
-    // ----------------- RESET / INIT -----------------
 
     public void ResetPuzzle()
     {
         Debug.Log("[GAME] Puzzle RESET triggered (BoardManager.OnEnable).");
 
-        // 1) Clear tile occupancy
         ClearOccupancy();
 
-        // 2) Reset all pieces to their spawn pose
         if (pieces != null)
         {
             foreach (var p in pieces)
@@ -106,7 +97,6 @@ public class BoardManager : MonoBehaviour
             }
         }
 
-        // 3) Hide the final image (if any)
         if (image != null)
             image.gameObject.SetActive(false);
     }
@@ -117,7 +107,6 @@ public class BoardManager : MonoBehaviour
             System.Array.Clear(occupied, 0, occupied.Length);
     }
 
-    // ----------------- GRID HELPERS -----------------
 
     public bool InBounds(Vector2Int c) =>
         c.x >= 0 && c.x < columns && c.y >= 0 && c.y < rows;
@@ -185,7 +174,6 @@ public class BoardManager : MonoBehaviour
                pos.y >= boardMin.y && pos.y <= boardMax.y;
     }
 
-    // ----------------- PUZZLE PROGRESS -----------------
 
     public bool AreAllPlayableTilesOccupied()
     {
@@ -193,7 +181,6 @@ public class BoardManager : MonoBehaviour
         {
             for (int y = 0; y < rows; y++)
             {
-                // Only count tiles that really exist (grid[x,y] != null).
                 if (grid[x, y] != null && !occupied[x, y])
                     return false;
             }
@@ -215,9 +202,6 @@ public class BoardManager : MonoBehaviour
         return count;
     }
 
-    // ----------------- HOOK FROM PIECE -----------------
-
-    // Call this after each successful piece placement (already done in Piece)
     public void OnPiecePlaced()
     {
         int used = CountOccupiedPlayableTiles();
@@ -225,7 +209,6 @@ public class BoardManager : MonoBehaviour
 
         if (AreAllPlayableTilesOccupied())
         {
-            //Debug.Log("[BOARD] All playable tiles are occupied → puzzle complete!");
 
             if (image != null)
                 image.gameObject.SetActive(true);

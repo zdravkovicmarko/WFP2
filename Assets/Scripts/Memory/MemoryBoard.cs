@@ -10,7 +10,7 @@ public class MemoryBoard : MonoBehaviour
 
     [Header("End Game")]
     [SerializeField] private RoomTeleporter endGameTeleporter;
-    [SerializeField] private int totalPairs = 9;   // 9 pairs in your setup
+    [SerializeField] private int totalPairs = 9;
 
     [Header("Audio")]
     public AudioSource audioSource;
@@ -69,14 +69,13 @@ public class MemoryBoard : MonoBehaviour
         gameFinished   = false;
     }
 
-    // --------- called by MemoryCard.OnSelected ---------
 
     public void HandleCardSelected(MemoryCard card)
     {
         if (gameFinished) return;
-        if (isCheckingPair) return;              // currently resolving a pair
-        if (activeCards.Contains(card)) return;  // no unselect/cheating
-        if (activeCards.Count >= 2) return;      // wait until current pair done
+        if (isCheckingPair) return;  
+        if (activeCards.Contains(card)) return; 
+        if (activeCards.Count >= 2) return;     
 
         card.Reveal();
         activeCards.Add(card);
@@ -89,7 +88,6 @@ public class MemoryBoard : MonoBehaviour
     {
         isCheckingPair = true;
 
-        // small delay so the player can actually see the second card
         yield return new WaitForSeconds(1.0f);
 
         var cardA = activeCards[0];
@@ -97,7 +95,6 @@ public class MemoryBoard : MonoBehaviour
 
         if (cardA.PairId == cardB.PairId)
         {
-            // MATCH → keep them face-up & locked
             cardA.SetMatched();
             cardB.SetMatched();
             matchedPairs++;
@@ -117,7 +114,6 @@ public class MemoryBoard : MonoBehaviour
         }
         else
         {
-            // NO MATCH → flip them back down
             cardA.Hide();
             cardB.Hide();
             PlayWrongSound();
@@ -126,7 +122,6 @@ public class MemoryBoard : MonoBehaviour
         activeCards.Clear();
         isCheckingPair = false;
 
-        // optional: here you can check if all cards are matched → game won
     }
 
     void PlayCorrectSound()
