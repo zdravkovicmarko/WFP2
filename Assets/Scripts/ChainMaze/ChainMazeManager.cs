@@ -1,9 +1,8 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 using UnityEngine.InputSystem;
-
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
@@ -30,6 +29,7 @@ public class ChainMazeManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip correctClip;
+    public Image image; 
 
     private bool hasWon = false;
 
@@ -479,6 +479,9 @@ public class ChainMazeManager : MonoBehaviour
 
         if (endGameTeleporter != null)
             endGameTeleporter.TeleportWithDefaultDelay();
+        
+        if (image != null)
+            image.gameObject.SetActive(true);
         
         StartCoroutine(DelayedReset());
     }
