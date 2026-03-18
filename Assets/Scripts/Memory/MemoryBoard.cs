@@ -108,7 +108,7 @@ public class MemoryBoard : MonoBehaviour
                 image.gameObject.SetActive(true);
                 if (endGameTeleporter != null)
                 {
-                    endGameTeleporter.TeleportWithDefaultDelay();
+                    endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.Memory);
                 }
             }
         }

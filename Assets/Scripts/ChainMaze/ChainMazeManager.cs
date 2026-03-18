@@ -21,6 +21,7 @@ public class ChainMazeManager : MonoBehaviour
     [Header("Line Settings")]
     [SerializeField] private float lineWidth = 0.02f;
     [SerializeField] private float lineYOffset = 0.01f;
+    [SerializeField] private float lineZOffset = 0.01f;
 
     [Header("Win / End Game")]
     [SerializeField] private RoomTeleporter endGameTeleporter;
@@ -260,7 +261,11 @@ public class ChainMazeManager : MonoBehaviour
         chain.cells.Add(cell);
         occupiedByPair[cell] = chain.pairId;
 
-        chain.worldPoints.Add(worldPos + Vector3.up * lineYOffset);
+        chain.worldPoints.Add(
+            worldPos 
+            + transform.up * lineYOffset 
+            + transform.forward * lineZOffset
+        );
         UpdateLine(chain);
     }
 
@@ -478,7 +483,7 @@ public class ChainMazeManager : MonoBehaviour
         Debug.Log("CHAIN MAZE: WIN! Triggering teleporter...");
 
         if (endGameTeleporter != null)
-            endGameTeleporter.TeleportWithDefaultDelay();
+            endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.ChainMaze);
         
         if (image != null)
             image.gameObject.SetActive(true);

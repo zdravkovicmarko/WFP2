@@ -214,7 +214,7 @@ public class BoardManager : MonoBehaviour
                 image.gameObject.SetActive(true);
 
             if (endGameTeleporter != null)
-                endGameTeleporter.TeleportWithDefaultDelay();
+                endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.BlockPuzzle);
         }
     }
 }

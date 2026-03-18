@@ -1,8 +1,16 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class RoomTeleporter : MonoBehaviour
 {
+    [System.Serializable]
+    public class DoorTagEntry
+    {
+        public MinigameRoom room;
+        public DoorTag doorTag;
+    }
+
     [Header("XR Locomotion")]
     public UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportationProvider teleportationProvider;
     public Transform destination;
@@ -10,22 +18,35 @@ public class RoomTeleporter : MonoBehaviour
     public GameObject[] activateOnTeleport;
     public GameObject[] deactivateOnTeleport;
 
+    [Header("Door Tags")]
+    [SerializeField] private List<DoorTagEntry> doorTags = new List<DoorTagEntry>();
+
     public void TeleportNow()
     {
-        StartCoroutine(TeleportRoutine(0f));
+        StartCoroutine(TeleportRoutine(0f, MinigameRoom.None));
     }
 
     public void TeleportWithDefaultDelay()
     {
-        StartCoroutine(TeleportRoutine(defaultDelaySeconds));
+        StartCoroutine(TeleportRoutine(defaultDelaySeconds, MinigameRoom.None));
     }
 
     public void TeleportWithDelay(float delaySeconds)
     {
-        StartCoroutine(TeleportRoutine(delaySeconds));
+        StartCoroutine(TeleportRoutine(delaySeconds, MinigameRoom.None));
     }
 
-    private IEnumerator TeleportRoutine(float delaySeconds)
+    public void TeleportWithDefaultDelay(MinigameRoom room)
+    {
+        StartCoroutine(TeleportRoutine(defaultDelaySeconds, room));
+    }
+
+    public void TeleportWithDelay(float delaySeconds, MinigameRoom room)
+    {
+        StartCoroutine(TeleportRoutine(delaySeconds, room));
+    }
+
+    private IEnumerator TeleportRoutine(float delaySeconds, MinigameRoom room)
     {
         if (teleportationProvider == null)
         {
@@ -39,6 +60,8 @@ public class RoomTeleporter : MonoBehaviour
             yield break;
         }
 
+        MarkDoorAsComplete(room);
+
         if (delaySeconds > 0f)
             yield return new WaitForSeconds(delaySeconds);
 
@@ -51,6 +74,26 @@ public class RoomTeleporter : MonoBehaviour
         };
 
         teleportationProvider.QueueTeleportRequest(request);
+    }
+
+    private void MarkDoorAsComplete(MinigameRoom room)
+    {
+        if (room == MinigameRoom.None)
+            return;
+
+        foreach (var entry in doorTags)
+        {
+            if (entry == null || entry.doorTag == null)
+                continue;
+
+            if (entry.room == room)
+            {
+                entry.doorTag.SetComplete();
+                return;
+            }
+        }
+
+        Debug.LogWarning($"[RoomTeleporter] No DoorTag assigned for room '{room}'.");
     }
 
     private void ApplyActivationSets()
