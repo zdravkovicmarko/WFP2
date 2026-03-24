@@ -6,6 +6,9 @@ public class MemoryCard : MonoBehaviour
     [Header("XR")]
     [SerializeField] private UnityEngine.XR.Interaction.Toolkit.Interactables.XRSimpleInteractable interactable;
 
+    [Header("Input")]
+    [SerializeField] private UnityEngine.InputSystem.InputActionProperty uiPressAction;
+
     public int PairId { get; private set; }
 
     public bool IsRevealed { get; private set; }
@@ -15,6 +18,9 @@ public class MemoryCard : MonoBehaviour
     private float baseZ;
     private bool  isInitialized;
     private MemoryBoard board;
+
+    private bool isHovered = false;
+    private bool prevPressed = false;
 
     private void Awake()
     {
@@ -29,6 +35,9 @@ public class MemoryCard : MonoBehaviour
             if (parts.Length >= 3 && int.TryParse(parts[2], out int id))
                 PairId = id;
         }
+
+        interactable.hoverEntered.AddListener(_ => isHovered = true);
+        interactable.hoverExited.AddListener(_ => isHovered = false);
     }
 
     public void Initialize(Vector3 localPosition)
@@ -42,6 +51,18 @@ public class MemoryCard : MonoBehaviour
 
         Hide();
         if (interactable) interactable.enabled = true;
+    }
+
+    private void Update()
+    {
+        bool pressed = uiPressAction.action != null && uiPressAction.action.IsPressed();
+        bool down = pressed && !prevPressed;
+        prevPressed = pressed;
+
+        if (!down || !isHovered)
+            return;
+
+        OnSelected();
     }
 
     public void OnSelected()
@@ -77,5 +98,17 @@ public class MemoryCard : MonoBehaviour
         transform.localRotation = Quaternion.Euler(-90f, 180f, 0f);
 
         if (interactable) interactable.enabled = false;
+    }
+
+    private void OnEnable()
+    {
+        if (uiPressAction.action != null)
+            uiPressAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (uiPressAction.action != null)
+            uiPressAction.action.Disable();
     }
 }

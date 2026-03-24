@@ -1,9 +1,21 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
+[RequireComponent(typeof(XRSimpleInteractable))]
 public class WimmelbookClueSelectable : MonoBehaviour
 {
     [Header("Visual (child with SpriteRenderer)")]
     [SerializeField] private GameObject visual;
+
+    [Header("XR")]
+    [SerializeField] private XRSimpleInteractable interactable;
+
+    [Header("Input")]
+    [SerializeField] private InputActionProperty uiPressAction;
+
+    private bool isHovered;
+    private bool prevPressed;
 
     private WimmelbookManager manager;
     private string id;
@@ -21,6 +33,14 @@ public class WimmelbookClueSelectable : MonoBehaviour
         if (visual == null && transform.childCount > 0)
             visual = transform.GetChild(0).gameObject;
 
+        if (!interactable)
+            interactable = GetComponent<XRSimpleInteractable>();
+
+        if (interactable != null)
+        {
+            interactable.hoverEntered.AddListener(_ => isHovered = true);
+            interactable.hoverExited.AddListener(_ => isHovered = false);
+        }
         ResetClue();
     }
 
@@ -46,5 +66,29 @@ public class WimmelbookClueSelectable : MonoBehaviour
     {
         if (visual != null)
             visual.SetActive(value);
+    }
+
+    private void OnEnable()
+    {
+        if (uiPressAction.action != null)
+            uiPressAction.action.Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (uiPressAction.action != null)
+            uiPressAction.action.Disable();
+    }
+
+    private void Update()
+    {
+        bool pressed = uiPressAction.action != null && uiPressAction.action.IsPressed();
+        bool down = pressed && !prevPressed;
+        prevPressed = pressed;
+
+        if (!down || !isHovered)
+            return;
+
+        OnSelected();
     }
 }
