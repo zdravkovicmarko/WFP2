@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
+using System;
 
 [RequireComponent(typeof(Rigidbody))]
 public class Piece : MonoBehaviour
@@ -24,6 +25,9 @@ public class Piece : MonoBehaviour
 
     public float autoResetDistanceFromSpawn = 0.75f;
     public bool enableAutoReset = true;
+
+    [Header("Debug")]
+    public bool debugPlacement = false;
 
     private Rigidbody rb;
 
@@ -55,6 +59,22 @@ public class Piece : MonoBehaviour
         else
         {
             initRotRelativeToBoard = Quaternion.Inverse(board.transform.rotation) * transform.rotation;
+        }
+
+        if (debugPlacement)
+        {
+            D($"SpawnPos={spawnPos}, SpawnRot={spawnRot.eulerAngles}");
+            for (int i = 0; i < pivotPoints.Length; i++)
+            {
+                if (pivotPoints[i] == null)
+                {
+                    D($"pivot[{i}] = NULL");
+                    continue;
+                }
+
+                Vector3 local = transform.InverseTransformPoint(pivotPoints[i].position);
+                D($"pivot[{i}] '{pivotPoints[i].name}' local={local} world={pivotPoints[i].position}");
+            }
         }
 
         grab.selectEntered.AddListener(_ => OnGrab());
@@ -96,7 +116,7 @@ public class Piece : MonoBehaviour
 
         if (isPlaced && lastCells != null && board != null)
         {
-            Debug.Log($"[DEBUG] {name}: Removing occupancy for previous placement.");
+            D($"Removing previous occupancy: {string.Join(", ", Array.ConvertAll(lastCells, c => $"({c.x},{c.y})"))}");
             board.SetOccupiedCells(lastCells, false);
             isPlaced = false;
         }
@@ -104,6 +124,8 @@ public class Piece : MonoBehaviour
 
     void OnRelease()
     {
+        D("OnRelease() -> TrySnap()");
+        SnapRotationToBoard();
         TrySnap();
     }
 
@@ -111,26 +133,27 @@ public class Piece : MonoBehaviour
     {
         if (board == null || pivotPoints == null || pivotPoints.Length == 0)
         {
+            D("TrySnap failed: board or pivots missing.");
             PlayWrongSound();
             ResetToSpawn();
             return;
         }
 
-        //Debug.Log($"[DEBUG] ----- TRY SNAP for {name} -----");
+        D("----- TRY SNAP START -----");
 
         if (!TryGetAlignedCells(out var cells, out var tileWorlds))
         {
-            //Debug.Log($"[DEBUG] {name}: alignment failed → ResetToSpawn()");
+            D("TryGetAlignedCells failed -> ResetToSpawn()");
             PlayWrongSound();
             ResetToSpawn();
             return;
         }
 
-        //Debug.Log($"[DEBUG] {name}: All cubes aligned & mapped to UNIQUE tiles → checking occupancy...");
+        D($"Mapped cells: {string.Join(", ", Array.ConvertAll(cells, c => $"({c.x},{c.y})"))}");
 
         if (!board.CanPlaceCells(cells))
         {
-            //Debug.Log($"[DEBUG] {name}: target cells occupied → ResetToSpawn()");
+            D("CanPlaceCells returned FALSE -> ResetToSpawn()");
             PlayWrongSound();
             ResetToSpawn();
             return;
@@ -142,13 +165,16 @@ public class Piece : MonoBehaviour
 
         board.OnPiecePlaced();
 
-        Quaternion finalRot = board.transform.rotation * initRotRelativeToBoard;
+        Quaternion finalRot = transform.rotation;
 
         Transform anchorPivot = pivotPoints[0];
         Vector3 localAnchor = transform.InverseTransformPoint(anchorPivot.position);
         Vector3 targetAnchorWorld = tileWorlds[0];
 
         Vector3 finalPos = targetAnchorWorld - finalRot * localAnchor + finalRot * snapOffset;
+
+        D($"Anchor pivot='{anchorPivot.name}' localAnchor={localAnchor}");
+        D($"targetAnchorWorld={targetAnchorWorld}, finalRot={finalRot.eulerAngles}, finalPos={finalPos}");
 
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
@@ -167,17 +193,17 @@ public class Piece : MonoBehaviour
                 new Vector2(w.x, w.z),
                 new Vector2(tw.x, tw.z)
             );
-            //Debug.Log($"[DEBUG] {name}: post-snap error for cube '{p.name}' = {err:F4}");
+
+            D($"POST SNAP pivot '{p.name}' -> world={w}, targetTile={tw}, planarErr={err:F4}");
         }
 
-        //Debug.Log($"[DEBUG] {name}: SNAP COMPLETE at pivot cell ({cells[0].x}, {cells[0].y}).");
-
+        D("SNAP COMPLETE");
         PlayCorrectSound();
     }
 
     void ResetToSpawn()
     {
-        Debug.Log($"[DEBUG] {name}: ResetToSpawn()");
+        D("ResetToSpawn()");
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.useGravity = true;
@@ -193,7 +219,10 @@ public class Piece : MonoBehaviour
         tileWorlds = null;
 
         if (pivotPoints == null || pivotPoints.Length == 0 || board == null)
+        {
+            D("TryGetAlignedCells aborted: pivots or board missing.");
             return false;
+        }
 
         int n = pivotPoints.Length;
         cells = new Vector2Int[n];
@@ -201,22 +230,23 @@ public class Piece : MonoBehaviour
 
         var used = new System.Collections.Generic.HashSet<Vector2Int>();
 
-        //Debug.Log($"[DEBUG] {name}: Checking {n} cube points...");
+        D($"Checking {n} pivots...");
 
         for (int i = 0; i < n; i++)
         {
             Transform p = pivotPoints[i];
             if (p == null)
             {
-                Debug.LogWarning($"{name}: pivotPoints[{i}] is null");
+                D($"pivot[{i}] is null -> fail");
                 return false;
             }
 
             Vector3 worldPos = p.position;
+            Vector3 localPos = transform.InverseTransformPoint(worldPos);
 
             if (!board.TryGetNearestCell(worldPos, out Vector2Int cell))
             {
-                Debug.Log($"[DEBUG] {name}: pivot '{p.name}' has no nearest cell → fail");
+                D($"pivot '{p.name}' world={worldPos} local={localPos} -> no nearest cell -> fail");
                 return false;
             }
 
@@ -227,17 +257,17 @@ public class Piece : MonoBehaviour
                 new Vector2(tileWorld.x, tileWorld.z)
             );
 
-            //Debug.Log($"[DEBUG] {name}: Cube '{p.name}' world {worldPos} → " + $"tile (x={cell.x}, y={cell.y}) at {tileWorld}, planarDist={planarDist:F3}");
+            D($"pivot '{p.name}' local={localPos} world={worldPos} -> cell=({cell.x},{cell.y}) tileWorld={tileWorld} planarDist={planarDist:F4}");
 
             if (planarDist > snapDistance)
             {
-                Debug.Log($"[DEBUG] {name}: cube '{p.name}' too far → fail");
+                D($"pivot '{p.name}' too far from nearest tile ({planarDist:F4} > {snapDistance}) -> fail");
                 return false;
             }
 
             if (used.Contains(cell))
             {
-                Debug.Log($"[DEBUG] {name}: duplicate cell ({cell.x}, {cell.y}) → fail");
+                D($"pivot '{p.name}' maps to duplicate cell ({cell.x},{cell.y}) -> fail");
                 return false;
             }
 
@@ -246,6 +276,7 @@ public class Piece : MonoBehaviour
             tileWorlds[i] = tileWorld;
         }
 
+        D("All pivots mapped successfully.");
         return true;
     }
 
@@ -264,5 +295,47 @@ public class Piece : MonoBehaviour
     {
         if (audioSource != null && wrongClip != null)
             audioSource.PlayOneShot(wrongClip);
+    }
+
+    void SnapRotationToBoard()
+    {
+        if (board == null)
+            return;
+
+        // Board basis
+        Vector3 boardUp = board.transform.up;
+        Vector3 boardForward = Vector3.ProjectOnPlane(board.transform.forward, boardUp).normalized;
+        Vector3 boardRight = Vector3.ProjectOnPlane(board.transform.right, boardUp).normalized;
+
+        if (boardForward.sqrMagnitude < 0.0001f || boardRight.sqrMagnitude < 0.0001f)
+            return;
+
+        // Take the piece's current forward and flatten it onto the board plane
+        Vector3 flatForward = Vector3.ProjectOnPlane(transform.forward, boardUp);
+
+        // Fallback if piece is pointing almost straight up/down
+        if (flatForward.sqrMagnitude < 0.0001f)
+            flatForward = boardForward;
+
+        flatForward.Normalize();
+
+        // Find signed angle relative to board forward
+        float signedAngle = Vector3.SignedAngle(boardForward, flatForward, boardUp);
+
+        // Snap to nearest 90°
+        float snappedAngle = Mathf.Round(signedAngle / 90f) * 90f;
+
+        // Build final flat board-aligned rotation
+        Quaternion finalRot = Quaternion.AngleAxis(snappedAngle, boardUp) * Quaternion.LookRotation(boardForward, boardUp);
+
+        transform.rotation = finalRot;
+
+        D($"SnapRotationToBoard() -> signedAngle={signedAngle:F2}, snappedAngle={snappedAngle:F2}, finalRot={finalRot.eulerAngles}");
+    }
+
+    void D(string msg)
+    {
+        if (debugPlacement)
+            Debug.Log($"[BLOCK DEBUG] {name}: {msg}");
     }
 }

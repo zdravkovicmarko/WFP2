@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class BoardManager : MonoBehaviour
 {
@@ -12,6 +13,9 @@ public class BoardManager : MonoBehaviour
     public Piece[] pieces; 
     public RoomTeleporter endGameTeleporter;
     public Image image; 
+
+    [Header("Debug")]
+    public bool debugBoardPlacement = false;
 
     private SnapTile[,] grid;
     private bool[,] occupied;
@@ -151,11 +155,19 @@ public class BoardManager : MonoBehaviour
         foreach (var c in cells)
         {
             if (!InBounds(c))
+            {
+                BD($"CanPlaceCells FALSE: ({c.x},{c.y}) out of bounds.");
                 return false;
+            }
 
             if (occupied[c.x, c.y])
+            {
+                BD($"CanPlaceCells FALSE: ({c.x},{c.y}) already occupied.");
                 return false;
+            }
         }
+
+        BD($"CanPlaceCells TRUE: {string.Join(", ", Array.ConvertAll(cells, c => $"({c.x},{c.y})"))}");
         return true;
     }
 
@@ -164,7 +176,10 @@ public class BoardManager : MonoBehaviour
         foreach (var c in cells)
         {
             if (InBounds(c))
+            {
                 occupied[c.x, c.y] = value;
+                BD($"SetOccupiedCells ({c.x},{c.y}) = {value}");
+            }
         }
     }
 
@@ -215,6 +230,13 @@ public class BoardManager : MonoBehaviour
 
             if (endGameTeleporter != null)
                 endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.BlockPuzzle);
+            Debug.Log($"[BOARD] All tiles filled! Block Puzzle COMPLETED");
         }
+    }
+
+    void BD(string msg)
+    {
+        if (debugBoardPlacement)
+            Debug.Log($"[BOARD DEBUG] {msg}");
     }
 }

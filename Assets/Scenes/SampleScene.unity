@@ -13703,6 +13703,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &229551143
 AudioSource:
   m_ObjectHideFlags: 0
@@ -52639,6 +52640,7 @@ MonoBehaviour:
   - {fileID: 229551142}
   endGameTeleporter: {fileID: 166963590}
   image: {fileID: 1308831109}
+  debugBoardPlacement: 0
   boardMin: {x: 0, y: 0}
   boardMax: {x: 0, y: 0}
 --- !u!1 &1094612058
@@ -53792,6 +53794,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &1131560031
 AudioSource:
   m_ObjectHideFlags: 0
@@ -76393,6 +76396,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &1511206391
 AudioSource:
   m_ObjectHideFlags: 0
@@ -96091,6 +96095,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &1894235257
 AudioSource:
   m_ObjectHideFlags: 0
@@ -100609,6 +100614,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &1984409252
 AudioSource:
   m_ObjectHideFlags: 0
@@ -105349,6 +105355,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  debugPlacement: 0
 --- !u!82 &2069447988
 AudioSource:
   m_ObjectHideFlags: 0
