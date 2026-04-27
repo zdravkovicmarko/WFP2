@@ -13,10 +13,12 @@ public class ChainMazeManager : MonoBehaviour
     [SerializeField] private Transform gridCellsParent;
     [SerializeField] private Transform pinsParent;
 
-    [Header("Interactor + UI Press")]
-    [SerializeField] private XRBaseInteractor interactor;
+    [Header("Interactors + UI Press")]
+    [SerializeField] private XRBaseInteractor leftInteractor;
+    [SerializeField] private XRBaseInteractor rightInteractor;
 
-    [SerializeField] private InputActionProperty uiPressAction;
+    [SerializeField] private InputActionProperty leftUiPressAction;
+    [SerializeField] private InputActionProperty rightUiPressAction;
 
     [Header("Line Settings")]
     [SerializeField] private float lineWidth = 0.02f;
@@ -45,7 +47,8 @@ public class ChainMazeManager : MonoBehaviour
 
     private IXRInteractor drawingInteractor = null;
     private bool isHolding = false;
-    private bool prevUIPress = false;
+    private bool prevLeftUIPress = false;
+    private bool prevRightUIPress = false;
 
     private ChainCellInteractable[] cellObjects;
     private XRSimpleInteractable[] cellXRInteractables;
@@ -63,42 +66,63 @@ public class ChainMazeManager : MonoBehaviour
 
     private void OnEnable()
     {
-        if (uiPressAction.action != null)
-            uiPressAction.action.Enable();
+        leftUiPressAction.action?.Enable();
+        rightUiPressAction.action?.Enable();
     }
 
     private void OnDisable()
     {
-        if (uiPressAction.action != null)
-            uiPressAction.action.Disable();
+        leftUiPressAction.action?.Disable();
+        rightUiPressAction.action?.Disable();
     }
 
     private void Update()
     {
-        bool pressed = uiPressAction.action != null && uiPressAction.action.IsPressed();
-        bool down = pressed && !prevUIPress;
-        bool up = !pressed && prevUIPress;
-        prevUIPress = pressed;
-
-        if (down) HandleUIPressDown();
-        if (up) HandleUIPressUp();
+        HandleControllerInput(leftInteractor, leftUiPressAction, ref prevLeftUIPress);
+        HandleControllerInput(rightInteractor, rightUiPressAction, ref prevRightUIPress);
     }
 
-    private void HandleUIPressDown()
+    private void HandleControllerInput(
+        XRBaseInteractor currentInteractor,
+        InputActionProperty pressAction,
+        ref bool prevPressed
+    )
     {
-        var hovered = GetFirstHovered(interactor);
+        bool pressed = pressAction.action != null && pressAction.action.IsPressed();
+
+        bool down = pressed && !prevPressed;
+        bool up = !pressed && prevPressed;
+
+        prevPressed = pressed;
+
+        if (down)
+            HandleUIPressDown(currentInteractor);
+
+        if (up)
+            HandleUIPressUp(currentInteractor);
+    }
+
+    private void HandleUIPressDown(XRBaseInteractor currentInteractor)
+    {
+        if (currentInteractor == null) return;
+
+        var hovered = GetFirstHovered(currentInteractor);
         if (hovered == null) return;
 
         var pin = hovered.transform.GetComponentInParent<PinEndpoint>();
         if (pin == null) return;
 
         Debug.Log($"[ChainMaze] UI PRESS DOWN on PIN {pin.name} pair={pin.pairId}");
-        OnPinHoldStart(pin, interactor);
+        OnPinHoldStart(pin, currentInteractor);
     }
 
-    private void HandleUIPressUp()
+    private void HandleUIPressUp(XRBaseInteractor currentInteractor)
     {
         if (!isHolding) return;
+
+        // Only the controller that started drawing may end the chain
+        if (drawingInteractor != currentInteractor)
+            return;
 
         Debug.Log("[ChainMaze] UI PRESS UP");
         OnPinHoldEnd();
@@ -202,9 +226,12 @@ public class ChainMazeManager : MonoBehaviour
     // Cell hover during hold
     public void OnCellHovered(Vector2Int coord, Vector3 worldCenter, IXRInteractor interactorSource)
     {
-        // UI Press is the gate
         if (!isHolding) return;
         if (activePairId == -1) return;
+
+        // Only the controller currently drawing may add cells
+        if (drawingInteractor != interactorSource)
+            return;
 
         TryStepToCell(coord, worldCenter);
     }
