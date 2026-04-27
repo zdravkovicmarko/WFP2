@@ -3,37 +3,37 @@ using UnityEngine;
 public enum GameVersion
 {
     None,
-    Version1,
-    Version2,
-    Version3,
-    Version4
+    Story,
+    Minimal,
+    Unimodal,
+    Multimodal
 }
 
 public class GameVersionManager : MonoBehaviour
 {
     public static GameVersion CurrentVersion = GameVersion.None;
 
-    public void SetVersion1()
+    public void SetStoryVersion()
     {
-        CurrentVersion = GameVersion.Version1;
+        CurrentVersion = GameVersion.Story;
         Debug.Log("Selected: Story Version");
     }
 
-    public void SetVersion2()
+    public void SetMinimalVersion()
     {
-        CurrentVersion = GameVersion.Version2;
+        CurrentVersion = GameVersion.Minimal;
         Debug.Log("Selected: Minimal Version");
     }
 
-    public void SetVersion3()
+    public void SetUnimodalVersion()
     {
-        CurrentVersion = GameVersion.Version3;
-        Debug.Log("Selected: Marko Ver A");
+        CurrentVersion = GameVersion.Unimodal;
+        Debug.Log("Selected: Unimodal Version");
     }
 
-    public void SetVersion4()
+    public void SetMultimodalVersion()
     {
-        CurrentVersion = GameVersion.Version4;
-        Debug.Log("Selected: Marko Ver B");
+        CurrentVersion = GameVersion.Multimodal;
+        Debug.Log("Selected: Multimodal");
     }
 }

@@ -38482,7 +38482,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Marko Ver A
+  m_text: Unimodal Version
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
@@ -40984,7 +40984,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2072397898}
         m_TargetAssemblyTypeName: GameVersionManager, Assembly-CSharp
-        m_MethodName: SetVersion2
+        m_MethodName: SetMinimalVersion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -94585,7 +94585,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Marko Ver B
+  m_text: Multimodal Version
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
@@ -95577,7 +95577,7 @@ GameObject:
   - component: {fileID: 1852016848}
   - component: {fileID: 1852016847}
   m_Layer: 5
-  m_Name: Marko Ver B
+  m_Name: Multimodal Version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -95845,7 +95845,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2072397898}
         m_TargetAssemblyTypeName: GameVersionManager, Assembly-CSharp
-        m_MethodName: SetVersion4
+        m_MethodName: SetMultimodalVersion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -103839,7 +103839,7 @@ GameObject:
   - component: {fileID: 1981360712}
   - component: {fileID: 1981360711}
   m_Layer: 5
-  m_Name: Marko Version A
+  m_Name: Unimodal Version
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -104107,7 +104107,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2072397898}
         m_TargetAssemblyTypeName: GameVersionManager, Assembly-CSharp
-        m_MethodName: SetVersion3
+        m_MethodName: SetUnimodalVersion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -113066,7 +113066,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2072397898}
         m_TargetAssemblyTypeName: GameVersionManager, Assembly-CSharp
-        m_MethodName: SetVersion1
+        m_MethodName: SetStoryVersion
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
