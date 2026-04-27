@@ -8,8 +8,12 @@ using UnityEngine.XR.Interaction.Toolkit.Interactables;
 public class DoorUIPressInteractable : MonoBehaviour
 {
     [Header("Input")]
-    [Tooltip("Assign: XRI RightHand Interaction / UI Press")]
-    [SerializeField] private InputActionProperty uiPressAction;
+    [SerializeField] private InputActionProperty leftUiPressAction;
+    [SerializeField] private InputActionProperty rightUiPressAction;
+
+    [Header("Controller Roots")]
+    [SerializeField] private Transform leftController;
+    [SerializeField] private Transform rightController;
 
     [Header("Teleport")]
     [SerializeField] private bool useDefaultDelay = true;
@@ -19,8 +23,8 @@ public class DoorUIPressInteractable : MonoBehaviour
     private XRSimpleInteractable interactable;
     private RoomTeleporter teleporter;
 
-    private bool isHovered;
-    private bool prevPressed;
+    private bool leftHovered;
+    private bool rightHovered;
 
     private void Awake()
     {
@@ -33,35 +37,34 @@ public class DoorUIPressInteractable : MonoBehaviour
 
     private void OnEnable()
     {
-        if (uiPressAction.action != null)
-            uiPressAction.action.Enable();
+        leftUiPressAction.action?.Enable();
+        rightUiPressAction.action?.Enable();
     }
 
     private void OnDisable()
     {
-        if (uiPressAction.action != null)
-            uiPressAction.action.Disable();
-    }
-
-    private void OnDestroy()
-    {
-        if (interactable != null)
-        {
-            interactable.hoverEntered.RemoveListener(OnHoverEntered);
-            interactable.hoverExited.RemoveListener(OnHoverExited);
-        }
+        leftUiPressAction.action?.Disable();
+        rightUiPressAction.action?.Disable();
     }
 
     private void Update()
     {
-        bool pressed = uiPressAction.action != null && uiPressAction.action.IsPressed();
-        bool down = pressed && !prevPressed;
-        prevPressed = pressed;
+        bool leftPressed = leftUiPressAction.action != null &&
+                           leftUiPressAction.action.WasPressedThisFrame();
 
-        if (!isHovered || !down || teleporter == null)
-            return;
+        bool rightPressed = rightUiPressAction.action != null &&
+                            rightUiPressAction.action.WasPressedThisFrame();
 
-        Debug.Log($"[DoorUIPress] Triggered on {name}");
+        if (leftHovered && leftPressed)
+            TriggerTeleport("Left");
+
+        if (rightHovered && rightPressed)
+            TriggerTeleport("Right");
+    }
+
+    private void TriggerTeleport(string hand)
+    {
+        Debug.Log($"[DoorUIPress] {hand} triggered {name}");
 
         if (useDefaultDelay)
             teleporter.TeleportWithDefaultDelay(roomToMarkComplete);
@@ -71,11 +74,23 @@ public class DoorUIPressInteractable : MonoBehaviour
 
     private void OnHoverEntered(HoverEnterEventArgs args)
     {
-        isHovered = true;
+        Transform interactorTransform = args.interactorObject.transform;
+
+        if (leftController != null && interactorTransform.IsChildOf(leftController))
+            leftHovered = true;
+
+        if (rightController != null && interactorTransform.IsChildOf(rightController))
+            rightHovered = true;
     }
 
     private void OnHoverExited(HoverExitEventArgs args)
     {
-        isHovered = false;
+        Transform interactorTransform = args.interactorObject.transform;
+
+        if (leftController != null && interactorTransform.IsChildOf(leftController))
+            leftHovered = false;
+
+        if (rightController != null && interactorTransform.IsChildOf(rightController))
+            rightHovered = false;
     }
 }

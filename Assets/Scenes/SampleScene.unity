@@ -3943,26 +3943,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1b771aef-91b7-4092-ba6d-9ae839945408
+      m_Id: 19699dba-a741-4c5a-8129-4952c667485c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 124afa03-2f3a-48ba-b206-bd179badd309
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &69662840
 GameObject:
   m_ObjectHideFlags: 0
@@ -6439,26 +6461,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 06ca18b9-c0b8-4d62-93fc-c40dd172d8d1
+      m_Id: cfc526a3-0fd6-45c0-8523-6b689284cc77
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 8f14717c-210c-4fa3-8ee1-25c17531015c
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &134747303
 GameObject:
   m_ObjectHideFlags: 0
@@ -19015,26 +19059,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 8215c5d9-f9df-4631-8a20-1a7f70863cb8
+      m_Id: 4d845eec-f598-4fbe-83fc-3c1019f954e7
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 2196f565-c23d-4950-96f8-b663c312b04f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &337197893
 GameObject:
   m_ObjectHideFlags: 0
@@ -19787,26 +19853,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: cefec61a-12f8-49fd-bd01-93e7fa46b6be
+      m_Id: ca57f1b9-6bbd-490e-bc20-883b5cec43c2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: cd685401-25f3-4f4e-b01e-188014467251
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &345713061
 GameObject:
   m_ObjectHideFlags: 0
@@ -21684,6 +21772,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 546380358}
   m_SourcePrefab: {fileID: 100100000, guid: c6984c48aed9a154294088f4265d8478, type: 3}
+--- !u!4 &395417143 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917674758240283209, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &396481592
 GameObject:
   m_ObjectHideFlags: 0
@@ -31658,26 +31751,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 0c2391e1-2c8d-4cdf-9127-2b96df5dd64a
+      m_Id: 2cd73f78-13b9-4045-83f8-0c981780599f
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 3e7abb1a-75b8-4f41-a77f-21aba2274f8e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &613466306
 GameObject:
   m_ObjectHideFlags: 0
@@ -41567,26 +41682,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: cbf0f20c-a137-42af-80d3-ac246f89b5cc
+      m_Id: 4a20534a-62d3-4b66-9112-d03bd088144b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ab7c08e8-fea3-4ed8-b554-77532e731d1a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &813117821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 4ef617531f6f01f43b5331f9fa6de3c9, type: 3}
@@ -49896,26 +50033,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: acd18181-3ecb-4087-bd69-c191a2159d96
+      m_Id: 7e54b4eb-ce64-4e45-a611-7cfb9a82ef94
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 3cdf9858-d0a4-471e-9786-a402617ef231
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1001 &1013615773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50387,26 +50546,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 57380e86-d447-48e6-a29e-420d600c121b
+      m_Id: 6a390485-4275-4035-a560-3ff8dbf22f8b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c5ee149e-52b0-4c39-a3b8-c90b965b1596
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1018353353
 GameObject:
   m_ObjectHideFlags: 0
@@ -57541,7 +57722,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805624187}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57ad3fa9b17fa6b48831971f24d07aea, type: 3}
   m_Name: 
@@ -57550,8 +57731,8 @@ MonoBehaviour:
   destination: {fileID: 1534392191}
   defaultDelaySeconds: 0
   activateOnTeleport:
-  - {fileID: 825639052}
   - {fileID: 922351275}
+  - {fileID: 825639052}
   deactivateOnTeleport: []
   doorTags: []
 --- !u!114 &1191717697
@@ -57659,26 +57840,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02d7e722c8dca64e8675114c8058868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: cdbe45fc-371a-447a-8bb9-3eaebb528320
+      m_Id: a5dbd034-196f-4bff-8568-792058c411c2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 8f24c8ef-067f-4094-a8a8-47135fc26b57
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: 0084371d-b036-427e-bbff-10df6074a335
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 07bc71d1-8f8a-413d-9b14-df5986fec20d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: d82b1150-4c51-4112-a662-d587c8fc99df
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
   useDefaultDelay: 1
   customDelaySeconds: 0
   roomToMarkComplete: 0
@@ -59917,26 +60120,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d4593e4f-9684-459f-884f-9151b25646ee
+      m_Id: 6fcd9b79-9992-4b40-bc6c-253e3c23ac39
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 74e4154b-2492-4533-af53-8c5c22400c62
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1236491679
 GameObject:
   m_ObjectHideFlags: 0
@@ -60953,26 +61178,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 37fb104c-0bcf-4ae5-a064-aed9527614f4
+      m_Id: 915584f7-9c3f-4203-abfc-a25c496ab90c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 153e0ccb-dec1-4821-8bda-5fdade15739d
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1243838585
 GameObject:
   m_ObjectHideFlags: 0
@@ -62593,26 +62840,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 3938ab92-7358-4a0a-ae0c-87ba9b243194
+      m_Id: 0b780446-e435-4ac2-8c77-78f35f1bc1f1
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 71e52228-608a-4899-a427-94ec9cb736f4
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!4 &1277723421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3222391660731057103, guid: 3d032f5481d2826478451895128a76f4, type: 3}
@@ -75201,26 +75470,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 0bb171a1-3fbe-4554-b756-75bdaa3702e9
+      m_Id: ceed47cd-8673-45b9-a20a-9498c665867c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: eeb4b13c-6567-4dfb-88d3-ba274d1ac049
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1496873812
 GameObject:
   m_ObjectHideFlags: 0
@@ -75893,26 +76184,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1cc442e0-41fa-412a-a52a-97eeca0c1705
+      m_Id: 348671d7-4cef-4a17-9197-8420754d9a5b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: db1dfb06-9de5-45b0-bdeb-547c3db4a4d2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1505117072
 GameObject:
   m_ObjectHideFlags: 0
@@ -77824,8 +78137,8 @@ MonoBehaviour:
   destination: {fileID: 1534392191}
   defaultDelaySeconds: 0
   activateOnTeleport:
-  - {fileID: 223615171}
   - {fileID: 1422181668}
+  - {fileID: 223615171}
   deactivateOnTeleport: []
   doorTags: []
 --- !u!114 &1533442957
@@ -77933,26 +78246,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02d7e722c8dca64e8675114c8058868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
-      m_Type: 1
-      m_ExpectedControlType: Button
-      m_Id: 56864e06-3f35-4847-9a1c-41d1dab122df
+      m_Name: Left Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 6dd84ae3-49de-4387-aeab-3cedb28e0390
       m_Processors: 
-      m_Interactions: Press(behavior=2)
+      m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 055cc5ea-44bb-4a97-b1da-002fe4c71dd4
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: 47795a4a-102d-424d-aa6a-aeb2c94ede36
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 75db8c95-faf1-4af5-a2c8-5ec89b20b5c7
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 39541611-b91b-4f8f-82b7-139c04c46b3a
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
   useDefaultDelay: 1
   customDelaySeconds: 0
   roomToMarkComplete: 0
@@ -79739,26 +80074,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02d7e722c8dca64e8675114c8058868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 22ff2905-6bb9-40aa-95bb-f982aee24969
+      m_Id: c0d27a26-dbdf-49f2-93f9-7b131f4d150a
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 8f24c8ef-067f-4094-a8a8-47135fc26b57
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: 0084371d-b036-427e-bbff-10df6074a335
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: c6b182ce-2df9-41d5-8398-79494d0f7a95
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: d82b1150-4c51-4112-a662-d587c8fc99df
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
   useDefaultDelay: 1
   customDelaySeconds: 0
   roomToMarkComplete: 0
@@ -81444,6 +81801,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613120375}
   m_CullTransparentMesh: 1
+--- !u!4 &1615894925 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7917674758919744168, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1617303124
 GameObject:
   m_ObjectHideFlags: 0
@@ -85751,26 +86113,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: a05d653d-03b4-4f5e-b571-e892b793a1d8
+      m_Id: e4a96dfc-5600-4096-b451-e0b6296a72a4
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: d25a6170-e8dd-447f-861b-209232c0610a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1702963519
 GameObject:
   m_ObjectHideFlags: 0
@@ -87023,26 +87407,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: ed0a1bd6-7610-4512-8127-6d4e1d5f6eff
+      m_Id: d30012ad-2842-4f9f-a17a-700ec42a3d3e
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 4f47e5bc-d1f2-4351-b920-40f691c13a8e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1725556565
 GameObject:
   m_ObjectHideFlags: 0
@@ -89328,26 +89734,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 4cefd91f-de25-4960-8f5a-715848aadc08
+      m_Id: a6af9cf1-fe80-477f-9457-ff5af7868875
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e3dd0ebd-c19c-4aaa-8fd5-d06bc2dc633f
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1760701143
 GameObject:
   m_ObjectHideFlags: 0
@@ -93916,26 +94344,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 95cdadb5-c557-4e08-966c-26192a8e36fd
+      m_Id: a3d47e4b-9ebc-4442-81a8-328544a7052b
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 475bbccf-ff63-41a1-ae1a-bbc8ba9be080
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &1863561144
 GameObject:
   m_ObjectHideFlags: 0
@@ -108333,26 +108783,48 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   interactable: {fileID: 0}
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: c15e1f49-6261-41e0-90f1-2eef56e1e2d8
+      m_Id: 60ed459d-97e7-46c7-adb4-223eb5410bb4
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 087a13bc-b479-4167-9143-ee40af9d0b8a
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: b9d3d12d-3020-4546-8dff-1c7ffe6a43fa
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: bc6747c7-ad3c-4165-b75e-b26beab25e73
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: 2a8338b8-bd21-4bed-97ad-3574ad476b84
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
 --- !u!1 &2123163515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a7c18935a76e657489fa0b247a5b6f0d, type: 3}
@@ -108939,7 +109411,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1843866297}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57ad3fa9b17fa6b48831971f24d07aea, type: 3}
   m_Name: 
@@ -108948,8 +109420,8 @@ MonoBehaviour:
   destination: {fileID: 1534392191}
   defaultDelaySeconds: 0
   activateOnTeleport:
-  - {fileID: 337197893}
   - {fileID: 2014922247}
+  - {fileID: 337197893}
   deactivateOnTeleport: []
   doorTags: []
 --- !u!114 &2129777308
@@ -109057,26 +109529,48 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02d7e722c8dca64e8675114c8058868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiPressAction:
+  leftUiPressAction:
     m_UseReference: 0
     m_Action:
-      m_Name: Ui Press
+      m_Name: Left Ui Press
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 4e297836-9c21-4338-b809-551511a5ef11
+      m_Id: a3181dcc-ac25-4c71-9f30-7f95a02ffdfa
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings:
       - m_Name: 
-        m_Id: 8f24c8ef-067f-4094-a8a8-47135fc26b57
-        m_Path: <QuestTouchPlusController>/triggerPressed
+        m_Id: 0084371d-b036-427e-bbff-10df6074a335
+        m_Path: <XRController>{LeftHand}/triggerPressed
         m_Interactions: 
         m_Processors: 
         m_Groups: 
-        m_Action: Ui Press
+        m_Action: Left Ui Press
         m_Flags: 0
       m_Flags: 0
     m_Reference: {fileID: 0}
+  rightUiPressAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Right Ui Press
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: a4859793-4198-48b1-865f-7a54f887975a
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings:
+      - m_Name: 
+        m_Id: d82b1150-4c51-4112-a662-d587c8fc99df
+        m_Path: <XRController>{RightHand}/triggerPressed
+        m_Interactions: 
+        m_Processors: 
+        m_Groups: 
+        m_Action: Right Ui Press
+        m_Flags: 0
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  leftController: {fileID: 1615894925}
+  rightController: {fileID: 395417143}
   useDefaultDelay: 1
   customDelaySeconds: 0
   roomToMarkComplete: 0
