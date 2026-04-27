@@ -9058,6 +9058,11 @@ MonoBehaviour:
     doorTag: {fileID: 2093780059}
   - room: 4
     doorTag: {fileID: 1683888529}
+  tutorialsToReset:
+  - {fileID: 1430840106}
+  - {fileID: 1281639525}
+  - {fileID: 468208938}
+  - {fileID: 699326650}
 --- !u!1 &167457177
 GameObject:
   m_ObjectHideFlags: 0
@@ -57735,6 +57740,7 @@ MonoBehaviour:
   - {fileID: 825639052}
   deactivateOnTeleport: []
   doorTags: []
+  tutorialsToReset: []
 --- !u!114 &1191717697
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78141,6 +78147,7 @@ MonoBehaviour:
   - {fileID: 223615171}
   deactivateOnTeleport: []
   doorTags: []
+  tutorialsToReset: []
 --- !u!114 &1533442957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79969,6 +79976,7 @@ MonoBehaviour:
   - {fileID: 2042138243}
   deactivateOnTeleport: []
   doorTags: []
+  tutorialsToReset: []
 --- !u!114 &1558497353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109424,6 +109432,7 @@ MonoBehaviour:
   - {fileID: 337197893}
   deactivateOnTeleport: []
   doorTags: []
+  tutorialsToReset: []
 --- !u!114 &2129777308
 MonoBehaviour:
   m_ObjectHideFlags: 0

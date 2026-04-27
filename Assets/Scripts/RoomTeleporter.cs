@@ -21,6 +21,9 @@ public class RoomTeleporter : MonoBehaviour
     [Header("Door Tags")]
     [SerializeField] private List<DoorTagEntry> doorTags = new List<DoorTagEntry>();
 
+    [Header("Tutorial Reset")]
+    [SerializeField] private Unity.VRTemplate.StepManager[] tutorialsToReset;
+
     public void TeleportNow()
     {
         StartCoroutine(TeleportRoutine(0f, MinigameRoom.None));
@@ -65,6 +68,7 @@ public class RoomTeleporter : MonoBehaviour
         if (delaySeconds > 0f)
             yield return new WaitForSeconds(delaySeconds);
 
+        ResetTutorials();
         ApplyActivationSets();
 
         var request = new UnityEngine.XR.Interaction.Toolkit.Locomotion.Teleportation.TeleportRequest
@@ -114,6 +118,17 @@ public class RoomTeleporter : MonoBehaviour
                 if (go == null) continue;
                 go.SetActive(false);
             }
+        }
+    }
+
+    private void ResetTutorials()
+    {
+        if (tutorialsToReset == null) return;
+
+        foreach (var tutorial in tutorialsToReset)
+        {
+            if (tutorial != null)
+                tutorial.ResetToFirstPage();
         }
     }
 }
