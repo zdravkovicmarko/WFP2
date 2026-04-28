@@ -509,12 +509,15 @@ public class ChainMazeManager : MonoBehaviour
 
         Debug.Log("CHAIN MAZE: WIN! Triggering teleporter...");
 
+        
+
         if (endGameTeleporter != null)
             endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.ChainMaze);
         
         if (image != null)
             image.gameObject.SetActive(true);
         
+        FindFirstObjectByType<StorySequenceManager>()?.PlayChainMaze();
         StartCoroutine(DelayedReset());
     }
 

@@ -106,10 +106,12 @@ public class MemoryBoard : MonoBehaviour
                 gameFinished = true;
                 Debug.Log("[MEMORY] All pairs found → puzzle complete!");
                 image.gameObject.SetActive(true);
+                
                 if (endGameTeleporter != null)
                 {
                     endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.Memory);
                 }
+                FindFirstObjectByType<StorySequenceManager>()?.PlayMemory();
             }
         }
         else

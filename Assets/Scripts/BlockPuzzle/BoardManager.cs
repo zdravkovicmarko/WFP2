@@ -228,8 +228,11 @@ public class BoardManager : MonoBehaviour
             if (image != null)
                 image.gameObject.SetActive(true);
 
+
             if (endGameTeleporter != null)
                 endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.BlockPuzzle);
+
+            FindFirstObjectByType<StorySequenceManager>()?.PlayBlockPuzzle();
             Debug.Log($"[BOARD] All tiles filled! Block Puzzle COMPLETED");
         }
     }

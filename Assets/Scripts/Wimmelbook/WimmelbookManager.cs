@@ -70,8 +70,11 @@ public class WimmelbookManager : MonoBehaviour
             gameFinished = true;
             Debug.Log("[WIMMELBOOK] All clues found → puzzle complete!");
             image.gameObject.SetActive(true);
+            
             if (endGameTeleporter != null)
                 endGameTeleporter.TeleportWithDefaultDelay(MinigameRoom.Wimmelbook);
+            
+            FindFirstObjectByType<StorySequenceManager>()?.PlayWimmelbook();
         }
     }
 

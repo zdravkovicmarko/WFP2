@@ -21,16 +21,24 @@ public class GameVersionManager : MonoBehaviour
     [SerializeField] private GameObject minimalHubEnvironment;
     [SerializeField] private GameObject minimalMiniGameEnvironment;
 
+    [SerializeField] private StorySequenceManager storySequenceManager;
+
     public void SetStoryVersion()
     {
         CurrentVersion = GameVersion.Story;
+        ApplyAllVersionSwitchers();
+
         Debug.Log("Selected: Story Version");
+
+        if (storySequenceManager != null)
+            storySequenceManager.PlayIntro();
     }
 
     public void SetMinimalVersion()
     {
         CurrentVersion = GameVersion.Minimal;
         ApplyEnvironmentVersion();
+        ApplyAllVersionSwitchers();
 
         Debug.Log("Selected: Minimal Version");
     }
@@ -62,5 +70,13 @@ public class GameVersionManager : MonoBehaviour
 
         if (minimalMiniGameEnvironment != null)
             minimalMiniGameEnvironment.SetActive(useMinimal);
+    }
+
+    private void ApplyAllVersionSwitchers()
+    {
+        var switchers = FindObjectsByType<VersionModelSwitcher>(FindObjectsSortMode.None);
+
+        foreach (var switcher in switchers)
+            switcher.ApplyVersion();
     }
 }
