@@ -13771,7 +13771,7 @@ Transform:
   m_GameObject: {fileID: 218592797}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.095, z: -1.457}
+  m_LocalPosition: {x: 0, y: 2.599, z: -1.457}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45972,7 +45972,7 @@ Transform:
   m_GameObject: {fileID: 834014890}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.095, z: -1.457}
+  m_LocalPosition: {x: 0, y: 2.599, z: -1.457}
   m_LocalScale: {x: 0.5, y: 0.1, z: 0.01}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -45992,10 +45992,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pictureParts:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1308831107}
+  - {fileID: 744260638}
+  - {fileID: 1585994175}
+  - {fileID: 326975251}
   buttonVisual: {fileID: 879552913}
   interactable: {fileID: 834014893}
   uiPressAction:
@@ -84933,7 +84933,7 @@ Transform:
   m_GameObject: {fileID: 1534392190}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -15.9904, y: 0.404, z: -0.69599986}
+  m_LocalPosition: {x: -15.9904, y: 0.404, z: -1.223}
   m_LocalScale: {x: 0.80000025, y: 0.8, z: 0.80000025}
   m_ConstrainProportionsScale: 0
   m_Children: []
