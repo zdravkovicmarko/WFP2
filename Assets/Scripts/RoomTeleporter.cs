@@ -85,6 +85,8 @@ public class RoomTeleporter : MonoBehaviour
         if (room == MinigameRoom.None)
             return;
 
+        bool found = false;
+
         foreach (var entry in doorTags)
         {
             if (entry == null || entry.doorTag == null)
@@ -93,11 +95,12 @@ public class RoomTeleporter : MonoBehaviour
             if (entry.room == room)
             {
                 entry.doorTag.SetComplete();
-                return;
+                found = true;
             }
         }
 
-        Debug.LogWarning($"[RoomTeleporter] No DoorTag assigned for room '{room}'.");
+        if (!found)
+            Debug.LogWarning($"[RoomTeleporter] No DoorTag assigned for room '{room}'.");
     }
 
     private void ApplyActivationSets()

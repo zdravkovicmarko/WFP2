@@ -13,6 +13,14 @@ public class GameVersionManager : MonoBehaviour
 {
     public static GameVersion CurrentVersion = GameVersion.None;
 
+    [Header("Normal Environment")]
+    [SerializeField] private GameObject normalHubEnvironment;
+    [SerializeField] private GameObject normalMiniGameEnvironment;
+
+    [Header("Minimal Environment")]
+    [SerializeField] private GameObject minimalHubEnvironment;
+    [SerializeField] private GameObject minimalMiniGameEnvironment;
+
     public void SetStoryVersion()
     {
         CurrentVersion = GameVersion.Story;
@@ -22,6 +30,8 @@ public class GameVersionManager : MonoBehaviour
     public void SetMinimalVersion()
     {
         CurrentVersion = GameVersion.Minimal;
+        ApplyEnvironmentVersion();
+
         Debug.Log("Selected: Minimal Version");
     }
 
@@ -35,5 +45,22 @@ public class GameVersionManager : MonoBehaviour
     {
         CurrentVersion = GameVersion.Multimodal;
         Debug.Log("Selected: Multimodal");
+    }
+
+    private void ApplyEnvironmentVersion()
+    {
+        bool useMinimal = CurrentVersion == GameVersion.Minimal;
+
+        if (normalHubEnvironment != null)
+            normalHubEnvironment.SetActive(!useMinimal);
+
+        if (normalMiniGameEnvironment != null)
+            normalMiniGameEnvironment.SetActive(!useMinimal);
+
+        if (minimalHubEnvironment != null)
+            minimalHubEnvironment.SetActive(useMinimal);
+
+        if (minimalMiniGameEnvironment != null)
+            minimalMiniGameEnvironment.SetActive(useMinimal);
     }
 }
