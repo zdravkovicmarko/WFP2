@@ -21,11 +21,19 @@ public class GameVersionManager : MonoBehaviour
     [SerializeField] private GameObject minimalHubEnvironment;
     [SerializeField] private GameObject minimalMiniGameEnvironment;
 
+    [Header("Story")]
     [SerializeField] private StorySequenceManager storySequenceManager;
+
+    [Header("Picture Reset")]
+    [SerializeField] private PictureCompleteButton pictureCompleteButton;
 
     public void SetStoryVersion()
     {
+        if (!TryResetBeforeVersionSwitch()) return;
+
         CurrentVersion = GameVersion.Story;
+
+        ApplyEnvironmentVersion();
         ApplyAllVersionSwitchers();
 
         Debug.Log("Selected: Story Version");
@@ -36,7 +44,10 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetMinimalVersion()
     {
+        if (!TryResetBeforeVersionSwitch()) return;
+
         CurrentVersion = GameVersion.Minimal;
+
         ApplyEnvironmentVersion();
         ApplyAllVersionSwitchers();
 
@@ -45,14 +56,41 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetUnimodalVersion()
     {
+        if (!TryResetBeforeVersionSwitch()) return;
+
         CurrentVersion = GameVersion.Unimodal;
+
+        ApplyEnvironmentVersion();
+        ApplyAllVersionSwitchers();
+
         Debug.Log("Selected: Unimodal Version");
     }
 
     public void SetMultimodalVersion()
     {
+        if (!TryResetBeforeVersionSwitch()) return;
+
         CurrentVersion = GameVersion.Multimodal;
-        Debug.Log("Selected: Multimodal");
+
+        ApplyEnvironmentVersion();
+        ApplyAllVersionSwitchers();
+
+        Debug.Log("Selected: Multimodal Version");
+    }
+
+    private bool TryResetBeforeVersionSwitch()
+    {
+        if (pictureCompleteButton == null)
+            return true;
+
+        if (!pictureCompleteButton.CanResetPicture())
+        {
+            Debug.LogWarning("[VersionManager] Cannot switch version while picture is partially completed.");
+            return false;
+        }
+
+        pictureCompleteButton.ResetPictureAndDoorTags();
+        return true;
     }
 
     private void ApplyEnvironmentVersion()

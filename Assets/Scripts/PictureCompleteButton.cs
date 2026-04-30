@@ -82,14 +82,33 @@ public class PictureCompleteButton : MonoBehaviour
 
     private void OnButtonPressed()
     {
-        // hide picture
+        ResetPictureAndDoorTags();
+    }
+
+    public bool CanResetPicture()
+    {
+        int activeCount = 0;
+
+        foreach (var part in pictureParts)
+        {
+            if (part != null && part.activeSelf)
+                activeCount++;
+        }
+
+        bool noneEnabled = activeCount == 0;
+        bool allEnabled = activeCount == pictureParts.Length;
+
+        return noneEnabled || allEnabled;
+    }
+
+    public void ResetPictureAndDoorTags()
+    {
         foreach (var part in pictureParts)
         {
             if (part != null)
                 part.SetActive(false);
         }
 
-        // update door
         if (doorTags != null)
         {
             foreach (var tag in doorTags)
@@ -99,7 +118,6 @@ public class PictureCompleteButton : MonoBehaviour
             }
         }
 
-        // hide button again
         if (buttonVisual != null)
             buttonVisual.SetActive(false);
 
