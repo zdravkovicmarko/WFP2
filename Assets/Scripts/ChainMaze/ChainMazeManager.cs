@@ -68,12 +68,18 @@ public class ChainMazeManager : MonoBehaviour
     {
         leftUiPressAction.action?.Enable();
         rightUiPressAction.action?.Enable();
+
+        if (chainsByPair.Count > 0)
+            ResetAll();
     }
 
     private void OnDisable()
     {
         leftUiPressAction.action?.Disable();
         rightUiPressAction.action?.Disable();
+
+        if (chainsByPair.Count > 0)
+            ResetAll();
     }
 
     private void Update()
@@ -518,7 +524,6 @@ public class ChainMazeManager : MonoBehaviour
             image.gameObject.SetActive(true);
         
         FindFirstObjectByType<StorySequenceManager>()?.PlayChainMaze();
-        StartCoroutine(DelayedReset());
     }
 
 
