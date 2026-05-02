@@ -198,4 +198,17 @@ public class StorySequenceManager : MonoBehaviour
 
         return index;
     }
+
+    public void ResetStoryProgress()
+    {
+        completedFragments.Clear();
+        finalPlayed = false;
+
+        if (audioSource != null && audioSource.isPlaying)
+            audioSource.Stop();
+
+        HideSubtitle();
+
+        Debug.Log("[StorySequence] Story progress reset.");
+    }
 }

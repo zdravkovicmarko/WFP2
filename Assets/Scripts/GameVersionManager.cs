@@ -39,6 +39,7 @@ public class GameVersionManager : MonoBehaviour
         Debug.Log("Selected: Story Version");
 
         if (storySequenceManager != null)
+            storySequenceManager.ResetStoryProgress();
             storySequenceManager.PlayIntro();
     }
 
