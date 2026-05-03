@@ -37,7 +37,7 @@ namespace Unity.VRTemplate
 
         private void OnEnable()
         {
-            ResetToFirstPage();
+            ResetToFirstPage(true);
         }
 
         public void Next()
@@ -57,7 +57,7 @@ namespace Unity.VRTemplate
             PlayCurrentVoiceLine();
         }
 
-        public void ResetToFirstPage()
+        public void ResetToFirstPage(bool playVoiceLine = true)
         {
             if (m_StepList == null || m_StepList.Count == 0)
                 return;
@@ -70,7 +70,10 @@ namespace Unity.VRTemplate
             if (m_StepButtonTextField != null)
                 m_StepButtonTextField.text = m_StepList[0].buttonText;
 
-            PlayCurrentVoiceLine();
+            if (playVoiceLine)
+                PlayCurrentVoiceLine();
+            else if (audioSource != null)
+                audioSource.Stop();
         }
 
         private void PlayCurrentVoiceLine()

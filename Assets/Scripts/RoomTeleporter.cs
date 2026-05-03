@@ -131,7 +131,7 @@ public class RoomTeleporter : MonoBehaviour
         foreach (var tutorial in tutorialsToReset)
         {
             if (tutorial != null)
-                tutorial.ResetToFirstPage();
+                tutorial.ResetToFirstPage(false);
         }
     }
 }
