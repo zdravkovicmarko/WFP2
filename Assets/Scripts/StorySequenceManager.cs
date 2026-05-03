@@ -19,16 +19,25 @@ public class StorySequenceManager : MonoBehaviour
     public class TimedSubtitle
     {
         public float startTime;
+
         [TextArea(1, 3)]
         public string text;
+    }
+
+    [System.Serializable]
+    public class StoryClipPart
+    {
+        public AudioClip clip;
+        public List<TimedSubtitle> subtitles = new();
     }
 
     [System.Serializable]
     public class StoryLine
     {
         public StoryFragment fragment;
-        public AudioClip clip;
-        public List<TimedSubtitle> subtitles = new();
+
+        [Header("Clips played in order")]
+        public List<StoryClipPart> parts = new();
     }
 
     [Header("Audio")]
@@ -41,8 +50,13 @@ public class StorySequenceManager : MonoBehaviour
     [Header("Story Lines")]
     [SerializeField] private List<StoryLine> storyLines = new();
 
+    [Header("Interaction Lock")]
+    [SerializeField] private Behaviour[] disableWhileStoryPlays;
+
     private readonly HashSet<StoryFragment> completedFragments = new();
     private bool finalPlayed;
+    private Coroutine activeRoutine;
+    public static bool IsStoryPlaying { get; private set; }
 
     private void Awake()
     {
@@ -87,7 +101,10 @@ public class StorySequenceManager : MonoBehaviour
             completedFragments.Add(fragment);
         }
 
-        StartCoroutine(PlayRoutine(fragment));
+        if (activeRoutine != null)
+            StopCoroutine(activeRoutine);
+
+        activeRoutine = StartCoroutine(PlayRoutine(fragment));
     }
 
     private IEnumerator PlayRoutine(StoryFragment fragment)
@@ -96,44 +113,72 @@ public class StorySequenceManager : MonoBehaviour
         if (line == null)
             yield break;
 
+        SetInteractionLock(true);
+
         if (audioSource != null && audioSource.isPlaying)
             audioSource.Stop();
 
         ShowSubtitle("");
 
-        if (audioSource != null && line.clip != null)
+        if (line.parts == null || line.parts.Count == 0)
         {
-            audioSource.clip = line.clip;
-            audioSource.Play();
-
-            int currentSubtitleIndex = -1;
-
-            while (audioSource.isPlaying)
-            {
-                float time = audioSource.time;
-
-                int newIndex = GetSubtitleIndex(line, time);
-
-                if (newIndex != currentSubtitleIndex)
-                {
-                    currentSubtitleIndex = newIndex;
-
-                    if (currentSubtitleIndex >= 0)
-                        ShowSubtitle(line.subtitles[currentSubtitleIndex].text);
-                }
-
-                yield return null;
-            }
+            yield return new WaitForSeconds(4f);
         }
         else
         {
-            yield return new WaitForSeconds(4f);
+            foreach (var part in line.parts)
+            {
+                if (part == null)
+                    continue;
+
+                yield return PlayClipPart(part);
+            }
         }
 
         HideSubtitle();
 
+        SetInteractionLock(false);
+
+        activeRoutine = null;
+
         if (fragment != StoryFragment.Intro && fragment != StoryFragment.Final)
             TryPlayFinal();
+    }
+
+    private IEnumerator PlayClipPart(StoryClipPart part)
+    {
+        if (audioSource == null || part.clip == null)
+        {
+            yield return new WaitForSeconds(4f);
+            yield break;
+        }
+
+        audioSource.Stop();
+        audioSource.clip = part.clip;
+        audioSource.Play();
+
+        int currentSubtitleIndex = -1;
+
+        while (audioSource.isPlaying)
+        {
+            float time = audioSource.time;
+
+            int newIndex = GetSubtitleIndex(part, time);
+
+            if (newIndex != currentSubtitleIndex)
+            {
+                currentSubtitleIndex = newIndex;
+
+                if (currentSubtitleIndex >= 0)
+                    ShowSubtitle(part.subtitles[currentSubtitleIndex].text);
+                else
+                    ShowSubtitle("");
+            }
+
+            yield return null;
+        }
+
+        ShowSubtitle("");
     }
 
     private void TryPlayFinal()
@@ -151,7 +196,11 @@ public class StorySequenceManager : MonoBehaviour
             return;
 
         finalPlayed = true;
-        StartCoroutine(PlayRoutine(StoryFragment.Final));
+
+        if (activeRoutine != null)
+            StopCoroutine(activeRoutine);
+
+        activeRoutine = StartCoroutine(PlayRoutine(StoryFragment.Final));
     }
 
     private StoryLine GetLine(StoryFragment fragment)
@@ -184,13 +233,16 @@ public class StorySequenceManager : MonoBehaviour
             subtitlePanel.SetActive(false);
     }
 
-    private int GetSubtitleIndex(StoryLine line, float time)
+    private int GetSubtitleIndex(StoryClipPart part, float time)
     {
         int index = -1;
 
-        for (int i = 0; i < line.subtitles.Count; i++)
+        if (part.subtitles == null)
+            return index;
+
+        for (int i = 0; i < part.subtitles.Count; i++)
         {
-            if (time >= line.subtitles[i].startTime)
+            if (time >= part.subtitles[i].startTime)
                 index = i;
             else
                 break;
@@ -204,11 +256,32 @@ public class StorySequenceManager : MonoBehaviour
         completedFragments.Clear();
         finalPlayed = false;
 
+        if (activeRoutine != null)
+        {
+            StopCoroutine(activeRoutine);
+            activeRoutine = null;
+        }
+
         if (audioSource != null && audioSource.isPlaying)
             audioSource.Stop();
 
         HideSubtitle();
+        SetInteractionLock(false);
 
         Debug.Log("[StorySequence] Story progress reset.");
+    }
+
+    private void SetInteractionLock(bool locked)
+    {
+        IsStoryPlaying = locked;
+
+        if (disableWhileStoryPlays == null)
+            return;
+
+        foreach (var behaviour in disableWhileStoryPlays)
+        {
+            if (behaviour == null) continue;
+            behaviour.enabled = !locked;
+        }
     }
 }

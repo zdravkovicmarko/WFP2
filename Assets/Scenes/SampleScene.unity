@@ -3545,7 +3545,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 0.09411765, g: 0.4392157, b: 0.7137255, a: 1}
     m_PressedColor: {r: 0.34509805, g: 0.6901961, b: 0.9647059, a: 1}
     m_SelectedColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -118778,87 +118778,105 @@ MonoBehaviour:
   subtitlePanel: {fileID: 119006476}
   storyLines:
   - fragment: 0
-    clip: {fileID: 8300000, guid: 86ed852ad35de3743bf62a3ac3aaf2ba, type: 3}
-    subtitles:
-    - startTime: 0
-      text: Ich bin mir sicher, dass ich schon einmal hier war.
-    - startTime: 4
-      text: "Dieses Haus\u2026 diese Dinge\u2026"
-    - startTime: 7.5
-      text: Sie bedeuten mir etwas.
-    - startTime: 10
-      text: "Aber die Erinnerungen sind bruchst\xFCckhaft."
-    - startTime: 13.5
-      text: "Als w\xFCrden sie sich verstecken."
-    - startTime: 16
-      text: "Vielleicht kann ich sie wiederfinden\u2026"
-    - startTime: 18.5
-      text: wenn ich genauer hinschaue.
+    parts:
+    - clip: {fileID: 8300000, guid: 86ed852ad35de3743bf62a3ac3aaf2ba, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Ich bin mir sicher, dass ich schon einmal hier war.
+      - startTime: 4
+        text: Dieses Haus... Diese Dinge...
+      - startTime: 7.5
+        text: Sie bedeuten mir etwas.
+      - startTime: 10
+        text: "Aber die Erinnerungen sind bruchst\xFCckhaft."
+      - startTime: 13.5
+        text: "Als w\xFCrden sie sich verstecken."
+      - startTime: 16
+        text: Vielleicht kann ich sie wiederfinden...
+      - startTime: 18.5
+        text: wenn ich genauer hinschaue.
+    - clip: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
+      subtitles: []
   - fragment: 1
-    clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}
-    subtitles:
-    - startTime: 0
-      text: "Diese Karten\u2026"
-    - startTime: 2.5
-      text: "Mein Mann und ich haben das fr\xFCher oft gespielt."
-    - startTime: 6
-      text: Immer wieder dieselben kleinen Spiele.
-    - startTime: 9.5
-      text: Und er hat sich nach jedem Gewinn gefreut,
-    - startTime: 13
-      text: "als w\xE4re es der Erste."
+    parts:
+    - clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Diese Karten...
+      - startTime: 2.5
+        text: "Mein Mann und ich haben das fr\xFCher oft gespielt."
+      - startTime: 6
+        text: Immer wieder dieselben kleinen Spiele.
+      - startTime: 9.5
+        text: Und er hat sich nach jedem Gewinn gefreut,
+      - startTime: 13
+        text: "als w\xE4re es der Erste."
   - fragment: 2
-    clip: {fileID: 8300000, guid: 5e0e5889f8f809f4d95ed480fe69f53f, type: 3}
-    subtitles:
-    - startTime: 0
-      text: "Diese Formen\u2026"
-    - startTime: 2.4
-      text: Mein Kind hat stundenlang damit gespielt.
-    - startTime: 5.7
-      text: Alles musste zusammenpassen.
-    - startTime: 8.2
-      text: Alles hatte seinen Platz.
-    - startTime: 10.2
-      text: Ich sehe es noch genau vor mir.
+    parts:
+    - clip: {fileID: 8300000, guid: 5e0e5889f8f809f4d95ed480fe69f53f, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Diese Formen...
+      - startTime: 2.4
+        text: Mein Kind hat stundenlang damit gespielt.
+      - startTime: 5.7
+        text: Alles musste zusammenpassen.
+      - startTime: 8.2
+        text: Alles hatte seinen Platz.
+      - startTime: 10.2
+        text: Ich sehe es noch genau vor mir.
   - fragment: 3
-    clip: {fileID: 8300000, guid: 7e70e4d7a32fd57479e3de0e4e85e6f3, type: 3}
-    subtitles:
-    - startTime: 0
-      text: "So viele kleine Dinge\u2026"
-    - startTime: 3
-      text: Und immer mittendrin dieser kleine Dieb.
-    - startTime: 6.5
-      text: "Er hat st\xE4ndig versucht, etwas vom Tisch zu klauen."
-    - startTime: 9.8
-      text: "Als h\xE4tte er gewusst, dass wir ihn trotzdem lieben w\xFCrden."
+    parts:
+    - clip: {fileID: 8300000, guid: 7e70e4d7a32fd57479e3de0e4e85e6f3, type: 3}
+      subtitles:
+      - startTime: 0
+        text: So viele kleine Dinge...
+      - startTime: 3
+        text: Und immer mittendrin dieser kleine Dieb.
+      - startTime: 6.5
+        text: "Er hat st\xE4ndig versucht, etwas vom Tisch zu klauen."
+      - startTime: 9.8
+        text: "Als h\xE4tte er gewusst, dass wir ihn trotzdem lieben w\xFCrden."
   - fragment: 4
-    clip: {fileID: 8300000, guid: cd585347fd398fc48bec1c52660ebb74, type: 3}
-    subtitles:
-    - startTime: 0
-      text: "Diese Wege\u2026"
-    - startTime: 2
-      text: "Fr\xFCher habe ich alles zusammengehalten."
-    - startTime: 5
-      text: "Habe daf\xFCr gesorgt, dass jeder seinen Weg findet."
-    - startTime: 8.5
-      text: Auch wenn ich selbst manchmal nicht wusste, wohin es geht.
+    parts:
+    - clip: {fileID: 8300000, guid: cd585347fd398fc48bec1c52660ebb74, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Diese Wege...
+      - startTime: 2
+        text: "Fr\xFCher habe ich alles zusammengehalten."
+      - startTime: 5
+        text: "Habe daf\xFCr gesorgt, dass jeder seinen Weg findet."
+      - startTime: 8.5
+        text: Auch wenn ich selbst manchmal nicht wusste, wohin es geht.
   - fragment: 5
-    clip: {fileID: 8300000, guid: fd559d3e9660fb148ac50181e1dd9b1d, type: 3}
-    subtitles:
-    - startTime: 0
-      text: Jetzt ergibt alles Sinn.
-    - startTime: 3
-      text: Wir waren hier.
-    - startTime: 4.8
-      text: Zusammen.
-    - startTime: 6.4
-      text: "Ein Leben voller kleiner Momente\u2026"
-    - startTime: 9.4
-      text: "Die ich fast vergessen h\xE4tte."
-    - startTime: 11.7
-      text: Aber sie sind noch da.
-    - startTime: 13.6
-      text: 'Und ich erinnere mich. '
+    parts:
+    - clip: {fileID: 8300000, guid: fd559d3e9660fb148ac50181e1dd9b1d, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Jetzt ergibt alles Sinn.
+      - startTime: 3
+        text: Wir waren hier.
+      - startTime: 4.8
+        text: Zusammen.
+      - startTime: 6.4
+        text: Ein Leben voller kleiner Momente,
+      - startTime: 9.4
+        text: "die ich fast vergessen h\xE4tte."
+      - startTime: 11.7
+        text: Aber sie sind noch da.
+      - startTime: 13.6
+        text: Und ich erinnere mich.
+    - clip: {fileID: 8300000, guid: 8116d0783b24f8a4a9be49bdf13bae39, type: 3}
+      subtitles:
+      - startTime: 0
+        text: Gratulation! Du bist ans Spielende angekommen.
+  disableWhileStoryPlays:
+  - {fileID: 1533442957}
+  - {fileID: 1558497353}
+  - {fileID: 1191717697}
+  - {fileID: 2129777308}
+  - {fileID: 185813015}
 --- !u!4 &2117903412
 Transform:
   m_ObjectHideFlags: 0

@@ -82,6 +82,7 @@ public class PictureCompleteButton : MonoBehaviour
 
     private void OnButtonPressed()
     {
+        if (StorySequenceManager.IsStoryPlaying) return;
         ResetPictureAndDoorTags();
     }
 

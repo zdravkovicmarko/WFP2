@@ -29,6 +29,7 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetStoryVersion()
     {
+        if (StorySequenceManager.IsStoryPlaying) return;
         if (!TryResetBeforeVersionSwitch()) return;
 
         CurrentVersion = GameVersion.Story;
@@ -45,6 +46,7 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetMinimalVersion()
     {
+        if (StorySequenceManager.IsStoryPlaying) return;
         if (!TryResetBeforeVersionSwitch()) return;
 
         CurrentVersion = GameVersion.Minimal;
@@ -57,6 +59,7 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetUnimodalVersion()
     {
+        if (StorySequenceManager.IsStoryPlaying) return;
         if (!TryResetBeforeVersionSwitch()) return;
 
         CurrentVersion = GameVersion.Unimodal;
@@ -69,6 +72,7 @@ public class GameVersionManager : MonoBehaviour
 
     public void SetMultimodalVersion()
     {
+        if (StorySequenceManager.IsStoryPlaying) return;
         if (!TryResetBeforeVersionSwitch()) return;
 
         CurrentVersion = GameVersion.Multimodal;

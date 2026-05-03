@@ -42,6 +42,9 @@ namespace Unity.VRTemplate
 
         public void Next()
         {
+            if (StorySequenceManager.IsStoryPlaying)
+                return;
+
             if (m_StepList == null || m_StepList.Count == 0)
                 return;
 
