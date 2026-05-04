@@ -40519,7 +40519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Unimodal Version
+  m_text: Visual Version
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
@@ -41620,12 +41620,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 745511504}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.0792, z: 1.1656001}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1828442400}
+  m_Father: {fileID: 1185833209}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &745511506
 MonoBehaviour:
@@ -62843,6 +62843,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 745511505}
   - {fileID: 1264686666}
   - {fileID: 2072397897}
   - {fileID: 218592798}
@@ -100885,7 +100886,6 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 745511505}
   - {fileID: 1182572654}
   - {fileID: 2117903412}
   - {fileID: 906572317}
@@ -116358,6 +116358,10 @@ MonoBehaviour:
   minimalMiniGameEnvironment: {fileID: 1404505112}
   storySequenceManager: {fileID: 2117903411}
   pictureCompleteButton: {fileID: 218592799}
+  muteAudioInUnimodal: 1
+  hapticPlayersToToggle:
+  - {fileID: 1615894926}
+  - {fileID: 2082847757}
 --- !u!1 &2072739399
 GameObject:
   m_ObjectHideFlags: 0
@@ -118880,7 +118884,13 @@ MonoBehaviour:
       - startTime: 18.5
         text: wenn ich genauer hinschaue.
     - clip: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
-      subtitles: []
+      subtitles:
+      - startTime: 0
+        text: Willkommen in unserem Spiel!
+      - startTime: 2.5
+        text: "Zeig auf Weiter & dr\xFCck mit dem Zeigefinger..."
+      - startTime: 5.1
+        text: "auf den Trigger-Knopf f\xFCr das Tutorial."
   - fragment: 1
     parts:
     - clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}

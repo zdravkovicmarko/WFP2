@@ -22,6 +22,9 @@ public class HapticFeedbackManager : MonoBehaviour
 
     public void PlayCorrect()
     {
+        if (!GameVersionManager.FeedbackEnabled)
+            return;
+
         // Stop wrong pattern if it is currently playing
         if (wrongRoutine != null)
         {
@@ -34,6 +37,9 @@ public class HapticFeedbackManager : MonoBehaviour
 
     public void PlayWrong()
     {
+        if (!GameVersionManager.FeedbackEnabled)
+            return;
+            
         if (wrongRoutine != null)
             StopCoroutine(wrongRoutine);
 

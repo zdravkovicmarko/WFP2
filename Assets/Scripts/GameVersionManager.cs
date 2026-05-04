@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.XR.Interaction.Toolkit.Inputs.Haptics;
 
 public enum GameVersion
 {
@@ -12,6 +14,12 @@ public enum GameVersion
 public class GameVersionManager : MonoBehaviour
 {
     public static GameVersion CurrentVersion = GameVersion.None;
+
+    // Story is active in Story, Unimodal, and Multimodal
+    public static bool StoryEnabled { get; private set; }
+
+    // Feedback is disabled only in Unimodal
+    public static bool FeedbackEnabled { get; private set; } = true;
 
     [Header("Normal Environment")]
     [SerializeField] private GameObject normalHubEnvironment;
@@ -27,60 +35,65 @@ public class GameVersionManager : MonoBehaviour
     [Header("Picture Reset")]
     [SerializeField] private PictureCompleteButton pictureCompleteButton;
 
+    [Header("Global Feedback")]
+    [SerializeField] private bool muteAudioInUnimodal = true;
+    [SerializeField] private HapticImpulsePlayer[] hapticPlayersToToggle;
+
     public void SetStoryVersion()
     {
-        if (StorySequenceManager.IsStoryPlaying) return;
-        if (!TryResetBeforeVersionSwitch()) return;
-
-        CurrentVersion = GameVersion.Story;
-
-        ApplyEnvironmentVersion();
-        ApplyAllVersionSwitchers();
-
-        Debug.Log("Selected: Story Version");
-
-        if (storySequenceManager != null)
-            storySequenceManager.ResetStoryProgress();
-            storySequenceManager.PlayIntro();
+        SelectVersion(GameVersion.Story, playIntro: true);
     }
 
     public void SetMinimalVersion()
     {
-        if (StorySequenceManager.IsStoryPlaying) return;
-        if (!TryResetBeforeVersionSwitch()) return;
-
-        CurrentVersion = GameVersion.Minimal;
-
-        ApplyEnvironmentVersion();
-        ApplyAllVersionSwitchers();
-
-        Debug.Log("Selected: Minimal Version");
+        SelectVersion(GameVersion.Minimal, playIntro: false);
     }
 
     public void SetUnimodalVersion()
     {
-        if (StorySequenceManager.IsStoryPlaying) return;
-        if (!TryResetBeforeVersionSwitch()) return;
-
-        CurrentVersion = GameVersion.Unimodal;
-
-        ApplyEnvironmentVersion();
-        ApplyAllVersionSwitchers();
-
-        Debug.Log("Selected: Unimodal Version");
+        SelectVersion(GameVersion.Unimodal, playIntro: true);
     }
 
     public void SetMultimodalVersion()
     {
+        SelectVersion(GameVersion.Multimodal, playIntro: true);
+    }
+
+    private void SelectVersion(GameVersion version, bool playIntro)
+    {
         if (StorySequenceManager.IsStoryPlaying) return;
         if (!TryResetBeforeVersionSwitch()) return;
 
-        CurrentVersion = GameVersion.Multimodal;
+        CurrentVersion = version;
 
+        ApplyVersionFlags();
         ApplyEnvironmentVersion();
         ApplyAllVersionSwitchers();
+        ApplyFeedbackSettings();
 
-        Debug.Log("Selected: Multimodal Version");
+        Debug.Log($"Selected: {version} Version");
+
+        if (StoryEnabled && storySequenceManager != null)
+        {
+            storySequenceManager.ResetStoryProgress();
+
+            if (playIntro)
+                storySequenceManager.PlayIntro();
+        }
+        else if (!StoryEnabled && storySequenceManager != null)
+        {
+            storySequenceManager.ResetStoryProgress();
+        }
+    }
+
+    private void ApplyVersionFlags()
+    {
+        StoryEnabled =
+            CurrentVersion == GameVersion.Story ||
+            CurrentVersion == GameVersion.Unimodal ||
+            CurrentVersion == GameVersion.Multimodal;
+
+        FeedbackEnabled = CurrentVersion != GameVersion.Unimodal;
     }
 
     private bool TryResetBeforeVersionSwitch()
@@ -121,5 +134,33 @@ public class GameVersionManager : MonoBehaviour
 
         foreach (var switcher in switchers)
             switcher.ApplyVersion();
+    }
+
+    private void ApplyFeedbackSettings()
+    {
+        if (muteAudioInUnimodal)
+            AudioListener.volume = FeedbackEnabled ? 1f : 0f;
+
+        if (!FeedbackEnabled)
+        {
+            InputSystem.ResetHaptics();
+            InputSystem.PauseHaptics();
+        }
+        else
+        {
+            InputSystem.ResumeHaptics();
+        }
+
+        if (hapticPlayersToToggle != null)
+        {
+            foreach (var player in hapticPlayersToToggle)
+            {
+                if (player == null) continue;
+                player.enabled = FeedbackEnabled;
+            }
+        }
+
+        Debug.Log($"[VersionManager] Story enabled: {StoryEnabled}");
+        Debug.Log($"[VersionManager] Feedback enabled: {FeedbackEnabled}");
     }
 }

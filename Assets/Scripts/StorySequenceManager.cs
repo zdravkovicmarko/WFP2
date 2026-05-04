@@ -90,7 +90,7 @@ public class StorySequenceManager : MonoBehaviour
 
     public void PlayFragment(StoryFragment fragment)
     {
-        if (GameVersionManager.CurrentVersion != GameVersion.Story)
+        if (!GameVersionManager.StoryEnabled)
             return;
 
         if (fragment != StoryFragment.Intro && fragment != StoryFragment.Final)
@@ -267,6 +267,7 @@ public class StorySequenceManager : MonoBehaviour
 
         HideSubtitle();
         SetInteractionLock(false);
+        IsStoryPlaying = false;
 
         Debug.Log("[StorySequence] Story progress reset.");
     }
