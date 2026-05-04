@@ -25,9 +25,21 @@ public class StorySequenceManager : MonoBehaviour
     }
 
     [System.Serializable]
+    public class SubtitleStyle
+    {
+        public Color textColor = Color.white;
+        public bool italic;
+    }
+
+    [System.Serializable]
     public class StoryClipPart
     {
         public AudioClip clip;
+
+        [Header("Speaker")]
+        public bool isGrandmotherVoice;
+
+        [Header("Subtitles")]
         public List<TimedSubtitle> subtitles = new();
     }
 
@@ -47,6 +59,19 @@ public class StorySequenceManager : MonoBehaviour
     [SerializeField] private TMP_Text subtitleText;
     [SerializeField] private GameObject subtitlePanel;
 
+    [Header("Subtitle Styles")]
+    [SerializeField] private SubtitleStyle tutorialStyle = new SubtitleStyle
+    {
+        textColor = Color.white,
+        italic = false
+    };
+
+    [SerializeField] private SubtitleStyle grandmotherStyle = new SubtitleStyle
+    {
+        textColor = new Color(1f, 0.86f, 0.55f),
+        italic = true
+    };
+
     [Header("Story Lines")]
     [SerializeField] private List<StoryLine> storyLines = new();
 
@@ -56,6 +81,7 @@ public class StorySequenceManager : MonoBehaviour
     private readonly HashSet<StoryFragment> completedFragments = new();
     private bool finalPlayed;
     private Coroutine activeRoutine;
+
     public static bool IsStoryPlaying { get; private set; }
 
     private void Awake()
@@ -157,6 +183,8 @@ public class StorySequenceManager : MonoBehaviour
         audioSource.clip = part.clip;
         audioSource.Play();
 
+        ApplySubtitleStyle(part.isGrandmotherVoice);
+
         int currentSubtitleIndex = -1;
 
         while (audioSource.isPlaying)
@@ -213,6 +241,17 @@ public class StorySequenceManager : MonoBehaviour
 
         Debug.LogWarning($"[StorySequence] Missing story line for {fragment}");
         return null;
+    }
+
+    private void ApplySubtitleStyle(bool isGrandmotherVoice)
+    {
+        if (subtitleText == null)
+            return;
+
+        SubtitleStyle style = isGrandmotherVoice ? grandmotherStyle : tutorialStyle;
+
+        subtitleText.color = style.textColor;
+        subtitleText.fontStyle = style.italic ? FontStyles.Italic : FontStyles.Normal;
     }
 
     private void ShowSubtitle(string text)

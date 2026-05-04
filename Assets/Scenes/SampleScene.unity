@@ -118864,10 +118864,17 @@ MonoBehaviour:
   audioSource: {fileID: 2117903410}
   subtitleText: {fileID: 119006477}
   subtitlePanel: {fileID: 119006476}
+  tutorialStyle:
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+    italic: 0
+  grandmotherStyle:
+    textColor: {r: 0.8980392, g: 0.83137256, b: 0.3137255, a: 1}
+    italic: 1
   storyLines:
   - fragment: 0
     parts:
     - clip: {fileID: 8300000, guid: 86ed852ad35de3743bf62a3ac3aaf2ba, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: Ich bin mir sicher, dass ich schon einmal hier war.
@@ -118884,6 +118891,7 @@ MonoBehaviour:
       - startTime: 18.5
         text: wenn ich genauer hinschaue.
     - clip: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
+      isGrandmotherVoice: 0
       subtitles:
       - startTime: 0
         text: Willkommen in unserem Spiel!
@@ -118894,6 +118902,7 @@ MonoBehaviour:
   - fragment: 1
     parts:
     - clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: Diese Karten...
@@ -118908,6 +118917,7 @@ MonoBehaviour:
   - fragment: 2
     parts:
     - clip: {fileID: 8300000, guid: 5e0e5889f8f809f4d95ed480fe69f53f, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: Diese Formen...
@@ -118922,6 +118932,7 @@ MonoBehaviour:
   - fragment: 3
     parts:
     - clip: {fileID: 8300000, guid: 7e70e4d7a32fd57479e3de0e4e85e6f3, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: So viele kleine Dinge...
@@ -118934,6 +118945,7 @@ MonoBehaviour:
   - fragment: 4
     parts:
     - clip: {fileID: 8300000, guid: cd585347fd398fc48bec1c52660ebb74, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: Diese Wege...
@@ -118946,6 +118958,7 @@ MonoBehaviour:
   - fragment: 5
     parts:
     - clip: {fileID: 8300000, guid: fd559d3e9660fb148ac50181e1dd9b1d, type: 3}
+      isGrandmotherVoice: 1
       subtitles:
       - startTime: 0
         text: Jetzt ergibt alles Sinn.
@@ -118962,6 +118975,7 @@ MonoBehaviour:
       - startTime: 13.6
         text: Und ich erinnere mich.
     - clip: {fileID: 8300000, guid: 8116d0783b24f8a4a9be49bdf13bae39, type: 3}
+      isGrandmotherVoice: 0
       subtitles:
       - startTime: 0
         text: Gratulation! Du bist am Spielende angekommen.
