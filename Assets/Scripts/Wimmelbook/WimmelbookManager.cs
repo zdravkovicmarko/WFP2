@@ -16,6 +16,9 @@ public class WimmelbookManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip correctClip;
 
+    [Header("Haptics")]
+    [SerializeField] private HapticFeedbackManager haptics;
+
     private readonly Dictionary<string, GameObject> iconById = new();
     public Image image;
     private int  foundCount;
@@ -24,6 +27,9 @@ public class WimmelbookManager : MonoBehaviour
     private void Awake()
     {
         CacheChildren(clueIconsParent, iconById, "clue_icon_");
+
+        if (haptics == null)
+            haptics = FindFirstObjectByType<HapticFeedbackManager>();
     }
 
     private void OnEnable()
@@ -102,5 +108,8 @@ public class WimmelbookManager : MonoBehaviour
     {
         if (audioSource != null && correctClip != null)
             audioSource.PlayOneShot(correctClip);
+
+        if (haptics != null)
+            haptics.PlayCorrect();
     }
 }

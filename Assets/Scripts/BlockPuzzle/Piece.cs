@@ -26,6 +26,9 @@ public class Piece : MonoBehaviour
     public float autoResetDistanceFromSpawn = 0.75f;
     public bool enableAutoReset = true;
 
+    [Header("Haptics")]
+    public HapticFeedbackManager haptics;
+
     [Header("Debug")]
     public bool debugPlacement = false;
 
@@ -51,6 +54,9 @@ public class Piece : MonoBehaviour
 
         if (audioSource == null)
         audioSource = GetComponent<AudioSource>();
+
+        if (haptics == null)
+        haptics = FindFirstObjectByType<HapticFeedbackManager>();
 
         if (board == null)
         {
@@ -289,12 +295,18 @@ public class Piece : MonoBehaviour
     {
         if (audioSource != null && correctClip != null)
             audioSource.PlayOneShot(correctClip);
+
+        if (haptics != null)
+            haptics.PlayCorrect();
     }
 
     void PlayWrongSound()
     {
         if (audioSource != null && wrongClip != null)
             audioSource.PlayOneShot(wrongClip);
+
+        if (haptics != null)
+            haptics.PlayWrong();
     }
 
     void SnapRotationToBoard()

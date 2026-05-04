@@ -17,6 +17,9 @@ public class MemoryBoard : MonoBehaviour
     public AudioClip correctClip;
     public AudioClip wrongClip; 
 
+    [Header("Haptics")]
+    [SerializeField] private HapticFeedbackManager haptics;
+
     public Image image;
 
     private readonly List<Transform>   cardTransforms = new List<Transform>();
@@ -34,6 +37,9 @@ public class MemoryBoard : MonoBehaviour
             cardTransforms.Add(child);
             slotPositions.Add(child.position);
         }
+
+        if (haptics == null)
+            haptics = FindFirstObjectByType<HapticFeedbackManager>();
     }
 
     void OnEnable()
@@ -130,11 +136,17 @@ public class MemoryBoard : MonoBehaviour
     {
         if (audioSource != null && correctClip != null)
             audioSource.PlayOneShot(correctClip);
+
+        if (haptics != null)
+            haptics.PlayCorrect();
     }
 
     void PlayWrongSound()
     {
         if (audioSource != null && wrongClip != null)
             audioSource.PlayOneShot(wrongClip);
+
+        if (haptics != null)
+            haptics.PlayWrong();
     }
 }

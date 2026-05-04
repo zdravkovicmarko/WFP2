@@ -32,6 +32,10 @@ public class ChainMazeManager : MonoBehaviour
     [Header("Audio")]
     public AudioSource audioSource;
     public AudioClip correctClip;
+
+    [Header("Haptics")]
+    [SerializeField] private HapticFeedbackManager haptics;
+
     public Image image; 
 
     private bool hasWon = false;
@@ -60,6 +64,9 @@ public class ChainMazeManager : MonoBehaviour
 
         cellObjects = gridCellsParent.GetComponentsInChildren<ChainCellInteractable>(true);
         cellXRInteractables = gridCellsParent.GetComponentsInChildren<XRSimpleInteractable>(true);
+
+        if (haptics == null)
+            haptics = FindFirstObjectByType<HapticFeedbackManager>();
 
         SetCellsEnabled(false);
     }
@@ -454,6 +461,9 @@ public class ChainMazeManager : MonoBehaviour
     {
         if (audioSource != null && correctClip != null)
             audioSource.PlayOneShot(correctClip);
+
+        if (haptics != null)
+            haptics.PlayCorrect();
     }
 
 

@@ -15315,6 +15315,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &229551143
 AudioSource:
@@ -20855,6 +20856,7 @@ MonoBehaviour:
   totalClues: 0
   audioSource: {fileID: 1547310134}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
+  haptics: {fileID: 745511506}
   image: {fileID: 326975253}
 --- !u!114 &337197896
 MonoBehaviour:
@@ -36918,6 +36920,7 @@ MonoBehaviour:
   resetDelaySeconds: 1.45
   audioSource: {fileID: 373607222}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
+  haptics: {fileID: 745511506}
   image: {fileID: 1585994177}
 --- !u!1 &663406654
 GameObject:
@@ -41592,6 +41595,58 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 744260638}
   m_CullTransparentMesh: 1
+--- !u!1 &745511504
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 745511505}
+  - component: {fileID: 745511506}
+  m_Layer: 0
+  m_Name: HapticFeedbackManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &745511505
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745511504}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1828442400}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &745511506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 745511504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90aa4d7307624b0488ccbc834435acdc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftHaptic: {fileID: 1615894926}
+  rightHaptic: {fileID: 2082847757}
+  correctAmplitude: 0.5
+  correctDuration: 0.125
+  wrongAmplitude: 0.25
+  wrongPulseDuration: 0.09
+  wrongPauseBetweenPulses: 0.2
+  wrongPulseCount: 4
 --- !u!1 &747711250
 GameObject:
   m_ObjectHideFlags: 0
@@ -59332,6 +59387,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &1131560031
 AudioSource:
@@ -62483,7 +62539,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 1182572656}
   backgroundMusic: {fileID: 8300000, guid: 4bb77356a8a0e484fbc0a74712115296, type: 3}
-  volume: 0.075
+  volume: 0.1
 --- !u!82 &1182572656
 AudioSource:
   m_ObjectHideFlags: 0
@@ -84251,6 +84307,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &1511206391
 AudioSource:
@@ -89542,6 +89599,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758919744168, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
   m_PrefabInstance: {fileID: 1373153106}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1615894926 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4553217226038635835, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1617303124
 GameObject:
   m_ObjectHideFlags: 0
@@ -89908,7 +89976,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.25
+  m_Volume: 0.175
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -100817,6 +100885,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 745511505}
   - {fileID: 1182572654}
   - {fileID: 2117903412}
   - {fileID: 906572317}
@@ -106171,6 +106240,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &1894235257
 AudioSource:
@@ -111235,6 +111305,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &1984409252
 AudioSource:
@@ -114382,6 +114453,7 @@ MonoBehaviour:
   audioSource: {fileID: 1618743261}
   correctClip: {fileID: 8300000, guid: 8174b7c4b611a3c46b290dc9e6fe3c02, type: 3}
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
+  haptics: {fileID: 745511506}
   image: {fileID: 744260640}
 --- !u!114 &2042138246
 MonoBehaviour:
@@ -116136,6 +116208,7 @@ MonoBehaviour:
   wrongClip: {fileID: 8300000, guid: e8229c146b6a0ff46be4b53674c213b8, type: 3}
   autoResetDistanceFromSpawn: 0.75
   enableAutoReset: 1
+  haptics: {fileID: 745511506}
   debugPlacement: 0
 --- !u!82 &2069447988
 AudioSource:
@@ -116958,6 +117031,17 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1674268716328342803, guid: e1709ae488d68054c86d1dc7b4106d46, type: 3}
+--- !u!114 &2082847757 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6283329559392337895, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
+  m_PrefabInstance: {fileID: 1373153106}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b734f2bd29eeddd4d85afb0c266228c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2085050069
 GameObject:
   m_ObjectHideFlags: 0
