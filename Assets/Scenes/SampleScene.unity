@@ -62497,7 +62497,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.1
+  m_Volume: 0.066
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -118870,7 +118870,7 @@ MonoBehaviour:
     - clip: {fileID: 8300000, guid: 8116d0783b24f8a4a9be49bdf13bae39, type: 3}
       subtitles:
       - startTime: 0
-        text: Gratulation! Du bist ans Spielende angekommen.
+        text: Gratulation! Du bist am Spielende angekommen.
   disableWhileStoryPlays:
   - {fileID: 1533442957}
   - {fileID: 1558497353}
