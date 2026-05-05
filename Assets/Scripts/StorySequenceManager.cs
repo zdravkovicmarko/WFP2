@@ -32,15 +32,25 @@ public class StorySequenceManager : MonoBehaviour
     }
 
     [System.Serializable]
-    public class StoryClipPart
+    public class LocalizedStoryContent
     {
         public AudioClip clip;
 
+        [Header("Subtitles")]
+        public List<TimedSubtitle> subtitles = new();
+    }
+
+    [System.Serializable]
+    public class StoryClipPart
+    {
         [Header("Speaker")]
         public bool isGrandmotherVoice;
 
-        [Header("Subtitles")]
-        public List<TimedSubtitle> subtitles = new();
+        [Header("German")]
+        public LocalizedStoryContent german = new();
+
+        [Header("English")]
+        public LocalizedStoryContent english = new();
     }
 
     [System.Serializable]
@@ -79,6 +89,7 @@ public class StorySequenceManager : MonoBehaviour
     [SerializeField] private Behaviour[] disableWhileStoryPlays;
 
     private readonly HashSet<StoryFragment> completedFragments = new();
+
     private bool finalPlayed;
     private Coroutine activeRoutine;
 
@@ -162,7 +173,6 @@ public class StorySequenceManager : MonoBehaviour
         }
 
         HideSubtitle();
-
         SetInteractionLock(false);
 
         activeRoutine = null;
@@ -173,14 +183,16 @@ public class StorySequenceManager : MonoBehaviour
 
     private IEnumerator PlayClipPart(StoryClipPart part)
     {
-        if (audioSource == null || part.clip == null)
+        LocalizedStoryContent content = GetLocalizedStoryContent(part);
+
+        if (audioSource == null || content == null || content.clip == null)
         {
             yield return new WaitForSeconds(4f);
             yield break;
         }
 
         audioSource.Stop();
-        audioSource.clip = part.clip;
+        audioSource.clip = content.clip;
         audioSource.Play();
 
         ApplySubtitleStyle(part.isGrandmotherVoice);
@@ -191,14 +203,14 @@ public class StorySequenceManager : MonoBehaviour
         {
             float time = audioSource.time;
 
-            int newIndex = GetSubtitleIndex(part, time);
+            int newIndex = GetSubtitleIndex(content, time);
 
             if (newIndex != currentSubtitleIndex)
             {
                 currentSubtitleIndex = newIndex;
 
                 if (currentSubtitleIndex >= 0)
-                    ShowSubtitle(part.subtitles[currentSubtitleIndex].text);
+                    ShowSubtitle(content.subtitles[currentSubtitleIndex].text);
                 else
                     ShowSubtitle("");
             }
@@ -243,6 +255,16 @@ public class StorySequenceManager : MonoBehaviour
         return null;
     }
 
+    private LocalizedStoryContent GetLocalizedStoryContent(StoryClipPart part)
+    {
+        if (part == null)
+            return null;
+
+        return LanguageManager.CurrentLanguage == GameLanguage.German
+            ? part.german
+            : part.english;
+    }
+
     private void ApplySubtitleStyle(bool isGrandmotherVoice)
     {
         if (subtitleText == null)
@@ -272,16 +294,16 @@ public class StorySequenceManager : MonoBehaviour
             subtitlePanel.SetActive(false);
     }
 
-    private int GetSubtitleIndex(StoryClipPart part, float time)
+    private int GetSubtitleIndex(LocalizedStoryContent content, float time)
     {
         int index = -1;
 
-        if (part.subtitles == null)
+        if (content == null || content.subtitles == null)
             return index;
 
-        for (int i = 0; i < part.subtitles.Count; i++)
+        for (int i = 0; i < content.subtitles.Count; i++)
         {
-            if (time >= part.subtitles[i].startTime)
+            if (time >= content.subtitles[i].startTime)
                 index = i;
             else
                 break;
@@ -320,7 +342,9 @@ public class StorySequenceManager : MonoBehaviour
 
         foreach (var behaviour in disableWhileStoryPlays)
         {
-            if (behaviour == null) continue;
+            if (behaviour == null)
+                continue;
+
             behaviour.enabled = !locked;
         }
     }

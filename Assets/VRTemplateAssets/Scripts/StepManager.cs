@@ -6,16 +6,28 @@ using UnityEngine;
 namespace Unity.VRTemplate
 {
     /// <summary>
-    /// Controls tutorial cards and plays the matching voice line for each card.
+    /// Controls tutorial cards, localized text, and localized voice lines.
     /// </summary>
     public class StepManager : MonoBehaviour
     {
         [Serializable]
         class Step
         {
+            [Header("Card")]
             public GameObject stepObject;
-            public string buttonText;
-            public AudioClip voiceLine;
+
+            [Tooltip("Text field inside this card that displays the tutorial text.")]
+            public TextMeshProUGUI stepTextField;
+
+            [Header("German")]
+            [TextArea(2, 5)] public string germanText;
+            public string germanButtonText;
+            public AudioClip germanVoiceLine;
+
+            [Header("English")]
+            [TextArea(2, 5)] public string englishText;
+            public string englishButtonText;
+            public AudioClip englishVoiceLine;
         }
 
         [Header("UI")]
@@ -37,7 +49,16 @@ namespace Unity.VRTemplate
 
         private void OnEnable()
         {
+            LanguageManager.OnLanguageChanged += RefreshCurrentStepText;
             ResetToFirstPage(true);
+        }
+
+        private void OnDisable()
+        {
+            LanguageManager.OnLanguageChanged -= RefreshCurrentStepText;
+
+            if (audioSource != null)
+                audioSource.Stop();
         }
 
         public void Next()
@@ -54,9 +75,7 @@ namespace Unity.VRTemplate
 
             m_StepList[m_CurrentStepIndex].stepObject.SetActive(true);
 
-            if (m_StepButtonTextField != null)
-                m_StepButtonTextField.text = m_StepList[m_CurrentStepIndex].buttonText;
-
+            RefreshCurrentStepText();
             PlayCurrentVoiceLine();
         }
 
@@ -70,13 +89,26 @@ namespace Unity.VRTemplate
 
             m_CurrentStepIndex = 0;
 
-            if (m_StepButtonTextField != null)
-                m_StepButtonTextField.text = m_StepList[0].buttonText;
+            RefreshCurrentStepText();
 
             if (playVoiceLine)
                 PlayCurrentVoiceLine();
             else if (audioSource != null)
                 audioSource.Stop();
+        }
+
+        private void RefreshCurrentStepText()
+        {
+            if (m_StepList == null || m_StepList.Count == 0)
+                return;
+
+            Step step = m_StepList[m_CurrentStepIndex];
+
+            if (step.stepTextField != null)
+                step.stepTextField.text = GetStepText(step);
+
+            if (m_StepButtonTextField != null)
+                m_StepButtonTextField.text = GetButtonText(step);
         }
 
         private void PlayCurrentVoiceLine()
@@ -86,7 +118,7 @@ namespace Unity.VRTemplate
 
             audioSource.Stop();
 
-            AudioClip clip = m_StepList[m_CurrentStepIndex].voiceLine;
+            AudioClip clip = GetVoiceLine(m_StepList[m_CurrentStepIndex]);
 
             if (clip == null)
                 return;
@@ -95,10 +127,25 @@ namespace Unity.VRTemplate
             audioSource.Play();
         }
 
-        private void OnDisable()
+        private string GetStepText(Step step)
         {
-            if (audioSource != null)
-                audioSource.Stop();
+            return LanguageManager.CurrentLanguage == GameLanguage.German
+                ? step.germanText
+                : step.englishText;
+        }
+
+        private string GetButtonText(Step step)
+        {
+            return LanguageManager.CurrentLanguage == GameLanguage.German
+                ? step.germanButtonText
+                : step.englishButtonText;
+        }
+
+        private AudioClip GetVoiceLine(Step step)
+        {
+            return LanguageManager.CurrentLanguage == GameLanguage.German
+                ? step.germanVoiceLine
+                : step.englishVoiceLine;
         }
     }
 }

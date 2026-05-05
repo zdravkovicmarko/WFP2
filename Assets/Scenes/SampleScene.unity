@@ -348,7 +348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen zu Memory!\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -7408,7 +7408,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Viel Erfolg!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -8028,6 +8028,81 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22, y: 0.22, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &145049902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145049903}
+  - component: {fileID: 145049905}
+  - component: {fileID: 145049904}
+  m_Layer: 5
+  m_Name: Button Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &145049903
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145049902}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1879017018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &145049904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145049902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &145049905
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145049902}
+  m_CullTransparentMesh: 1
 --- !u!1 &145746642
 GameObject:
   m_ObjectHideFlags: 0
@@ -10029,26 +10104,61 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 3409566789092376685}
   m_StepList:
   - stepObject: {fileID: 1147199963}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 1754699343}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 1215012699}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 1760222175}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 734501189}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 1060371908}
-    buttonText: Continue
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   - stepObject: {fileID: 329674977}
-    buttonText: Restart
-    voiceLine: {fileID: 0}
+    stepTextField: {fileID: 0}
+    germanText: 
+    germanButtonText: 
+    germanVoiceLine: {fileID: 0}
+    englishText: 
+    englishButtonText: 
+    englishVoiceLine: {fileID: 0}
   audioSource: {fileID: 0}
 --- !u!1 &167748694
 GameObject:
@@ -12456,8 +12566,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xF6se das R\xE4tsel! Bei Schwierigkeiten dr\xFCck auf <b>Hinweis</b>,
-    um <b>eine</b> Verbindung anzuzeigen."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -13941,7 +14050,7 @@ GameObject:
   - component: {fileID: 218592800}
   - component: {fileID: 218592799}
   m_Layer: 0
-  m_Name: button
+  m_Name: ResetButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13956,7 +14065,7 @@ Transform:
   m_GameObject: {fileID: 218592797}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.4032001, y: -1.1168001, z: -0.6847999}
+  m_LocalPosition: {x: -1.4032001, y: -1.736, z: -0.26079988}
   m_LocalScale: {x: 0.4, y: 0.080000006, z: 0.008}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -15910,8 +16019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dr\xFCcke den <b>Trigger</b>-Knopf, um eine\nKarte aufzudecken. Pro Runde
-    k\xF6nnen\n2 Karten aufgedeckt werden."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -16773,6 +16881,213 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.22, y: 0.22, z: 0.22}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &265189090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265189091}
+  - component: {fileID: 265189099}
+  - component: {fileID: 265189098}
+  - component: {fileID: 265189097}
+  - component: {fileID: 265189096}
+  - component: {fileID: 265189095}
+  - component: {fileID: 265189094}
+  - component: {fileID: 265189093}
+  - component: {fileID: 265189092}
+  m_Layer: 5
+  m_Name: CardRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &265189091
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 3.233}
+  m_LocalScale: {x: 0.0019999999, y: 0.0019999999, z: 0.0019999999}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 633358882}
+  - {fileID: 1879017018}
+  - {fileID: 1810799212}
+  - {fileID: 2076097455}
+  m_Father: {fileID: 755020301}
+  m_LocalEulerAnglesHint: {x: 0, y: 160, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -16.822, y: 1.515}
+  m_SizeDelta: {x: 350, y: 250}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &265189092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3245ec927659c4140ac4f8d17403cc18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_HorizontalFit: 0
+  m_VerticalFit: 1
+--- !u!114 &265189093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 24
+    m_Right: 24
+    m_Top: 24
+    m_Bottom: 24
+  m_ChildAlignment: 4
+  m_Spacing: 14
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
+--- !u!114 &265189094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.7490196}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 65d31ca9600c4654e886aa7bab36e94b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &265189095
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_CullTransparentMesh: 0
+--- !u!114 &265189096
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
+--- !u!114 &265189097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &265189098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 1
+--- !u!223 &265189099
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265189090}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &269107734
 GameObject:
   m_ObjectHideFlags: 0
@@ -17034,8 +17349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ziel ist, alle <b>Pin-Paare</b> auf dem\n<b>Blockbrett</b> ohne L\xFCcken
-    zu verbinden."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -17782,7 +18096,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen zum Chain Maze!\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -18334,7 +18648,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 302632812}
-  - component: {fileID: 302632821}
   - component: {fileID: 302632820}
   - component: {fileID: 302632819}
   - component: {fileID: 302632818}
@@ -18535,36 +18848,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!114 &302632821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 302632811}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fc0d34940dd44129c17bc6d4396b866, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_StepButtonTextField: {fileID: 500112838}
-  m_StepList:
-  - stepObject: {fileID: 0}
-    buttonText: Weiter
-    voiceLine: {fileID: 0}
-  - stepObject: {fileID: 0}
-    buttonText: Weiter
-    voiceLine: {fileID: 0}
-  - stepObject: {fileID: 0}
-    buttonText: Weiter
-    voiceLine: {fileID: 0}
-  - stepObject: {fileID: 0}
-    buttonText: Weiter
-    voiceLine: {fileID: 0}
-  - stepObject: {fileID: 0}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 0}
-  audioSource: {fileID: 0}
 --- !u!1 &305581757
 GameObject:
   m_ObjectHideFlags: 0
@@ -19369,12 +19652,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Die Bildteile und das gesamte <b>Bild</b>
-
-    kannst du am Ende im Hauptraum
-
-    ansehen.
-    Viel Erfolg!'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -23669,6 +23947,83 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 546380358}
   m_SourcePrefab: {fileID: 100100000, guid: c6984c48aed9a154294088f4265d8478, type: 3}
+--- !u!1 &394769527
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 394769528}
+  - component: {fileID: 394769530}
+  - component: {fileID: 394769529}
+  m_Layer: 5
+  m_Name: Button Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &394769528
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394769527}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1469295828}
+  - {fileID: 1956803569}
+  m_Father: {fileID: 1879017018}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &394769529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394769527}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &394769530
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 394769527}
+  m_CullTransparentMesh: 1
 --- !u!4 &395417143 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7917674758240283209, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
@@ -24606,7 +24961,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b873120a80369e440ba03e663b63fc0e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 65d31ca9600c4654e886aa7bab36e94b, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -27634,23 +27989,61 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 103966457}
   m_StepList:
   - stepObject: {fileID: 1162352073}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: d7f392b35e4adbc41bb617e363c1d19f, type: 3}
+    stepTextField: {fileID: 295674818}
+    germanText: "Willkommen zum Chain Maze! Dr\xFCck auf <b>Weiter</b> f\xFCr das
+      Tutorial."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: d7f392b35e4adbc41bb617e363c1d19f, type: 3}
+    englishText: Welcome to Chain Maze! Press <b>Next</b> for the tutorial.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 488a75835be07a642b9d8659750dcaf4, type: 3}
   - stepObject: {fileID: 714422971}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: a9d4e8f15417df04c9daaec254301729, type: 3}
+    stepTextField: {fileID: 282030293}
+    germanText: "Ziel ist, alle <b>Pin-Paare</b> auf dem <b>Blockbrett</b> ohne L\xFCcken
+      zu verbinden."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: a9d4e8f15417df04c9daaec254301729, type: 3}
+    englishText: The goal is to connect all <b>pin pairs</b> on the <b>block board</b>
+      without gaps.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 1a486ece575f45343aacf895c48e91c2, type: 3}
   - stepObject: {fileID: 637961056}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: b846195b3e003e848b7a6c4857f9fed7, type: 3}
+    stepTextField: {fileID: 1117423581}
+    germanText: "Dr\xFCcke mit dem <b>Trigger</b>-Knopf auf einen Pin und beweg deinen
+      Controller mit gepresstem Knopf \xFCber das Brett."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: b846195b3e003e848b7a6c4857f9fed7, type: 3}
+    englishText: Press on a pin with the <b>trigger</b> button and move your controller
+      over the board while holding the button.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 6d962e5a36adc71478ce4280f3640049, type: 3}
   - stepObject: {fileID: 95573869}
-    buttonText: Hinweis
-    voiceLine: {fileID: 8300000, guid: c277029f077d75444942031620e49051, type: 3}
+    stepTextField: {fileID: 200933642}
+    germanText: "L\xF6se das R\xE4tsel! Bei Schwierigkeiten dr\xFCck auf <b>Hinweis</b>,
+      um eine Verbindung anzuzeigen."
+    germanButtonText: Hinweis
+    germanVoiceLine: {fileID: 8300000, guid: c277029f077d75444942031620e49051, type: 3}
+    englishText: Solve the puzzle! If you have difficulties, press <b>Hint</b> to
+      show a connection.
+    englishButtonText: Hint
+    englishVoiceLine: {fileID: 8300000, guid: 57c03ac05102afe4b9c0b4af6b9e973f, type: 3}
   - stepObject: {fileID: 138740942}
-    buttonText: "L\xF6sung"
-    voiceLine: {fileID: 8300000, guid: d352c8f9011afcc489f02121f51599a9, type: 3}
+    stepTextField: {fileID: 701219401}
+    germanText: "Bei Bedarf dr\xFCck auf <b>L\xF6sung</b>, um eine m\xF6gliche L\xF6sung
+      anzuzeigen."
+    germanButtonText: "L\xF6sung"
+    germanVoiceLine: {fileID: 8300000, guid: d352c8f9011afcc489f02121f51599a9, type: 3}
+    englishText: If needed, press <b>Solution</b> to show a possible solution.
+    englishButtonText: Solution
+    englishVoiceLine: {fileID: 8300000, guid: d23186a66295c544ebcfc8f070173566, type: 3}
   - stepObject: {fileID: 1669979595}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 8300000, guid: b10bb714562cee24e8e99ceb0c11876d, type: 3}
+    stepTextField: {fileID: 137598173}
+    germanText: Viel Erfolg!
+    germanButtonText: Zum Anfang
+    germanVoiceLine: {fileID: 8300000, guid: b10bb714562cee24e8e99ceb0c11876d, type: 3}
+    englishText: Good luck!
+    englishButtonText: To Start
+    englishVoiceLine: {fileID: 8300000, guid: 2274a7985fce2de43bca9bd4b481160c, type: 3}
   audioSource: {fileID: 468208947}
 --- !u!114 &468208939
 MonoBehaviour:
@@ -35313,6 +35706,102 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &633358881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 633358882}
+  - component: {fileID: 633358885}
+  - component: {fileID: 633358884}
+  - component: {fileID: 633358883}
+  m_Layer: 5
+  m_Name: Background
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &633358882
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633358881}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 265189091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -1.5}
+  m_SizeDelta: {x: 0, y: -3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &633358883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633358881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
+--- !u!114 &633358884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633358881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.9019608}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 65d31ca9600c4654e886aa7bab36e94b, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &633358885
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633358881}
+  m_CullTransparentMesh: 1
 --- !u!1 &635110383
 GameObject:
   m_ObjectHideFlags: 0
@@ -36243,8 +36732,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen in unserem Spiel! Zeig auf\n<b>Weiter</b> & dr\xFCck mit dem
-    Zeigefinger\nauf den <b>Trigger</b>-Knopf f\xFCr das Tutorial."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -38140,8 +38628,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ziel ist, alle <b>Bl\xF6cke</b> auf dem\n<b>Blockbrett</b> ohne L\xFCcken
-    anzuordnen."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -38835,7 +39322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen zum Wimmelbuch!\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -38981,17 +39468,42 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 2055243686}
   m_StepList:
   - stepObject: {fileID: 245660976}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: e9f4a6a77c232c540b8fc24cb095a029, type: 3}
+    stepTextField: {fileID: 699196586}
+    germanText: "Willkommen zum Wimmelbuch! Dr\xFCck auf <b>Weiter</b> f\xFCr das
+      Tutorial."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: e9f4a6a77c232c540b8fc24cb095a029, type: 3}
+    englishText: Welcome to Wimmelbook! Press <b>Next</b> for the tutorial.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 0e3f1b6b464bfa94080ea252935ee9a6, type: 3}
   - stepObject: {fileID: 1825854770}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: 420b594be0f8e56439df3294808bbb35, type: 3}
+    stepTextField: {fileID: 1629989796}
+    germanText: Ziel ist, alle 6 <b>versteckten</b> Objekte, die <b>auf der Seite
+      angezeigt</b> werden, im Bild zu finden.
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: 420b594be0f8e56439df3294808bbb35, type: 3}
+    englishText: The goal is to find all 6 <b>hidden</b> objects that are <b>displayed
+      on the side</b> of the picture in the picture.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: e01da97765ab7e848a368058ea147462, type: 3}
   - stepObject: {fileID: 1398077891}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: eb5d1fc4a8678c74bb915392e7f728be, type: 3}
+    stepTextField: {fileID: 1295857373}
+    germanText: "Dr\xFCcke den <b>Trigger</b>-Knopf, um im dar\xFCber schwebenden
+      Bereich ein verstecktes Objekt auszuw\xE4hlen."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: eb5d1fc4a8678c74bb915392e7f728be, type: 3}
+    englishText: Press the <b>trigger</b> button while hovering over the respective
+      area to select a hidden object.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 1e643c1fc877b64459e267733f9a9054, type: 3}
   - stepObject: {fileID: 1812177102}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 8300000, guid: d4b667363e103744b99f58426433100f, type: 3}
+    stepTextField: {fileID: 1943443791}
+    germanText: Finde die 6 <b>versteckten</b> Objekte. Viel Erfolg!
+    germanButtonText: Zum Anfang
+    germanVoiceLine: {fileID: 8300000, guid: d4b667363e103744b99f58426433100f, type: 3}
+    englishText: Find the 6 <b>hidden</b> objects. Good luck!
+    englishButtonText: To Start
+    englishVoiceLine: {fileID: 8300000, guid: 4234e8644a272b54c94fae44889f76ac, type: 3}
   audioSource: {fileID: 699326659}
 --- !u!114 &699326651
 MonoBehaviour:
@@ -39322,8 +39834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bei Bedarf dr\xFCck auf <b>L\xF6sung</b>,\num eine m\xF6gliche L\xF6sung
-    anzuzeigen."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -42225,6 +42736,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 754818319}
   m_CullTransparentMesh: 1
+--- !u!1 &755020300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 755020301}
+  - component: {fileID: 755020302}
+  m_Layer: 5
+  m_Name: LanguageButtons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &755020301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755020300}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 15.425, y: -2.89, z: -3.511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 265189091}
+  m_Father: {fileID: 1185833209}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &755020302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755020300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf6166aaded72ab4b96dfb2e160f58ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &756086973 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8134302614855669011, guid: c4a645c929982ea41a52b5037ee7d94d, type: 3}
@@ -51099,8 +51655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Zum L\xF6sen m\xFCssen Bl\xF6cke nicht rotiert werden. Bei Schwierigkeiten
-    dr\xFCck auf <b>Hinweis</b> f\xFCr <b>eine</b> Blockplatzierung."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -57285,8 +57840,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Um die <b>einzelnen Teile</b> des Bildes zu erlangen, musst du je 1 <b>Minispiel</b>
-    hinter den 4 T\xFCren meistern. "
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -58859,8 +59413,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dr\xFCcke mit dem <b>Trigger</b>-Knopf auf einen Pin und beweg deinen
-    Controller mit gepresstem Knopf \xFCber das Brett."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -62846,6 +63399,7 @@ Transform:
   - {fileID: 745511505}
   - {fileID: 1264686666}
   - {fileID: 2072397897}
+  - {fileID: 755020301}
   - {fileID: 218592798}
   - {fileID: 166963589}
   - {fileID: 1534392191}
@@ -68979,17 +69533,41 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 187723257}
   m_StepList:
   - stepObject: {fileID: 483995753}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: b1d81c0ea5b7b5e4eb1592faed8f3446, type: 3}
+    stepTextField: {fileID: 3333501}
+    germanText: "Willkommen zu Memory! Dr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: b1d81c0ea5b7b5e4eb1592faed8f3446, type: 3}
+    englishText: Welcome to Memory! Press <b>Next</b> for the tutorial.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 96bb8309f5fbbc84f9d583decf1be872, type: 3}
   - stepObject: {fileID: 1892785710}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: 2bcd0e141e7ab6c4889f2be1d24066bb, type: 3}
+    stepTextField: {fileID: 1302915294}
+    germanText: Ziel ist, alle <b>Kartenpaare</b> aufzudecken.
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: 2bcd0e141e7ab6c4889f2be1d24066bb, type: 3}
+    englishText: The goal is to uncover all <b>pairs of cards</b>.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 62695f563cb504649bbf935097e2d805, type: 3}
   - stepObject: {fileID: 1545442281}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: e1903f23461155b4487cb63d1057ffd3, type: 3}
+    stepTextField: {fileID: 242484533}
+    germanText: "Dr\xFCcke den <b>Trigger</b>-Knopf, um eine Karte aufzudecken. Pro
+      Runde k\xF6nnen 2 Karten aufgedeckt werden."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: e1903f23461155b4487cb63d1057ffd3, type: 3}
+    englishText: Press the <b>trigger</b> button to uncover a card. Per round, 2
+      cards can be uncovered.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 4b844e261bacd6e47bde7b631bf0b4fa, type: 3}
   - stepObject: {fileID: 1124312028}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 8300000, guid: a510ab538b0c8b042a06c3807a870ab2, type: 3}
+    stepTextField: {fileID: 1888575666}
+    germanText: "Finde die 9 Kartenpaare im <b>zuf\xE4llig angeordneten</b> Set.
+      Viel Erfolg!"
+    germanButtonText: Zum Anfang
+    germanVoiceLine: {fileID: 8300000, guid: a510ab538b0c8b042a06c3807a870ab2, type: 3}
+    englishText: Find the 9 pairs of cards in the <b>randomly arranged</b> set. Good
+      luck!
+    englishButtonText: To Start
+    englishVoiceLine: {fileID: 8300000, guid: 7569508aa564c5c4d9d234a525c62c2a, type: 3}
   audioSource: {fileID: 1281639534}
 --- !u!114 &1281639526
 MonoBehaviour:
@@ -69659,8 +70237,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dr\xFCcke den <b>Trigger</b>-Knopf, um im\ndar\xFCber schwebenden Bereich
-    ein\nverstecktes Objekt auszuw\xE4hlen."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -70489,7 +71066,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Ziel ist, alle <b>Kartenpaare</b> aufzudecken.
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -78260,23 +78837,60 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 911674825}
   m_StepList:
   - stepObject: {fileID: 2079849885}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: db0ef80d1cc3000498ac97638b73c5a1, type: 3}
+    stepTextField: {fileID: 1765715595}
+    germanText: "Willkommen zum Block Puzzle! Dr\xFCck auf <b>Weiter</b> f\xFCr das
+      Tutorial."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: db0ef80d1cc3000498ac97638b73c5a1, type: 3}
+    englishText: Welcome to Block Puzzle! Press <b>Next</b> for the tutorial.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 10f78720928c9704499f482fcbf21011, type: 3}
   - stepObject: {fileID: 339666618}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: 21d08aa3ae6f03b4f941e7c4b808a666, type: 3}
+    stepTextField: {fileID: 687272106}
+    germanText: "Ziel ist, alle <b>Bl\xF6cke</b> auf dem <b>Blockbrett</b> ohne L\xFCcken
+      anzuordnen."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: 21d08aa3ae6f03b4f941e7c4b808a666, type: 3}
+    englishText: The goal is to arrange all <b>blocks</b> on the <b>block board</b>
+      without gaps.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: a9cce1c4cec504643b7f6e1145e460ac, type: 3}
   - stepObject: {fileID: 98188100}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: a7fbc67af46ee0b4b871dd60653a4791, type: 3}
+    stepTextField: {fileID: 1621646954}
+    germanText: Halte den <b>Grip</b>-Knopf, um einen Block in die Hand zu nehmen.
+      Lass ihn los, um den Block zu platzieren.
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: a7fbc67af46ee0b4b871dd60653a4791, type: 3}
+    englishText: Hold the <b>grip</b> button to take a block into your hand. Let
+      it go to place the block.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: e1a8104cf889aea4aa68a9d7536fe8b6, type: 3}
   - stepObject: {fileID: 1496121250}
-    buttonText: Hinweis
-    voiceLine: {fileID: 8300000, guid: 3d3e424d87ad8734488662af54ca0278, type: 3}
+    stepTextField: {fileID: 927755155}
+    germanText: "Zum L\xF6sen m\xFCssen Bl\xF6cke nicht rotiert werden. Bei Schwierigkeiten
+      dr\xFCck auf <b>Hinweis</b> f\xFCr <b>eine</b> Blockplatzierung."
+    germanButtonText: Hinweis
+    germanVoiceLine: {fileID: 8300000, guid: 3d3e424d87ad8734488662af54ca0278, type: 3}
+    englishText: To solve it, the blocks do not need to be rotated. If you have difficulties,
+      press <b>Hint</b> for <b>one</b> block placement.
+    englishButtonText: Hint
+    englishVoiceLine: {fileID: 8300000, guid: 75e0944d64cc88945b11a6f4c8590cc2, type: 3}
   - stepObject: {fileID: 1831656090}
-    buttonText: "L\xF6sung"
-    voiceLine: {fileID: 8300000, guid: 8918abac2c195c0428ff0fa4f765591a, type: 3}
+    stepTextField: {fileID: 1519903116}
+    germanText: "Bei Bedarf dr\xFCck auf <b>L\xF6sung</b>, um die L\xF6sung anzuzeigen."
+    germanButtonText: "L\xF6sung"
+    germanVoiceLine: {fileID: 8300000, guid: 8918abac2c195c0428ff0fa4f765591a, type: 3}
+    englishText: If needed, press <b>Solution</b> to show the solution.
+    englishButtonText: Solution
+    englishVoiceLine: {fileID: 8300000, guid: d2055a9f0a0073246a49633fddf78380, type: 3}
   - stepObject: {fileID: 297319944}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 8300000, guid: 26ba013a10ee3e343920a869b716aec9, type: 3}
+    stepTextField: {fileID: 1834315482}
+    germanText: Viel Erfolg!
+    germanButtonText: Zum Anfang
+    germanVoiceLine: {fileID: 8300000, guid: 26ba013a10ee3e343920a869b716aec9, type: 3}
+    englishText: Good luck!
+    englishButtonText: To Start
+    englishVoiceLine: {fileID: 8300000, guid: a5432bb4cfc600a4583d424a9d8e5f48, type: 3}
   audioSource: {fileID: 1430840115}
 --- !u!114 &1430840107
 MonoBehaviour:
@@ -79663,6 +80277,81 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_HorizontalFit: 1
   m_VerticalFit: 0
+--- !u!1 &1453932369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1453932370}
+  - component: {fileID: 1453932372}
+  - component: {fileID: 1453932371}
+  m_Layer: 5
+  m_Name: MaskFill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1453932370
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453932369}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745445749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1453932371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453932369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34509805, g: 0.6901961, b: 0.9647059, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &1453932372
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1453932369}
+  m_CullTransparentMesh: 1
 --- !u!1 &1453991808
 GameObject:
   m_ObjectHideFlags: 0
@@ -80838,6 +81527,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1469017431}
   m_CullTransparentMesh: 1
+--- !u!1 &1469295827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1469295828}
+  - component: {fileID: 1469295830}
+  - component: {fileID: 1469295829}
+  m_Layer: 5
+  m_Name: MaskFill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1469295828
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469295827}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394769528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1469295829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469295827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.34509805, g: 0.6901961, b: 0.9647059, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &1469295830
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1469295827}
+  m_CullTransparentMesh: 1
 --- !u!1 &1469537536
 GameObject:
   m_ObjectHideFlags: 0
@@ -81751,20 +82515,54 @@ MonoBehaviour:
   m_StepButtonTextField: {fileID: 1359894391}
   m_StepList:
   - stepObject: {fileID: 173535265}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
+    stepTextField: {fileID: 649726598}
+    germanText: "Willkommen in unserem Spiel! Zeig auf <b>Weiter</b> & dr\xFCck mit
+      dem Zeigefinger auf den <b>Trigger</b>-Knopf f\xFCr das Tutorial."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
+    englishText: Welcome to our game! Point at <b>Next</b> & press the <b>trigger</b>
+      button with your index finger for the tutorial.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 4bd5b2c77d1ba59468813ae56a2794a5, type: 3}
   - stepObject: {fileID: 1134117438}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: c723b61763c60c9498b3fe606cb6cd3e, type: 3}
+    stepTextField: {fileID: 2123792742}
+    germanText: Ziel ist, deine <b>Erinnerung</b> mithilfe eines <b>Bildes</b> wiederzufinden.
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: c723b61763c60c9498b3fe606cb6cd3e, type: 3}
+    englishText: The goal is to rediscover your <b>memory</b> with the help of a
+      <b>picture</b>.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 32b460c754a97344f9feb1aa37ae9461, type: 3}
   - stepObject: {fileID: 404052643}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: a1406eaa993b1ce42bdb0dee457dac93, type: 3}
+    stepTextField: {fileID: 1086243622}
+    germanText: "Um die <b>einzelnen Teile</b> des Bildes zu erlangen, musst du je
+      1 <b>Minispiel</b> hinter den 4 T\xFCren meistern."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: a1406eaa993b1ce42bdb0dee457dac93, type: 3}
+    englishText: To obtain the <b>individual pieces</b> of the picture, you have
+      to complete 1 <b>mini-game</b> behind each of the 4 doors.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: 6a23987f3a8694a4da7e9f7dc2fca5e4, type: 3}
   - stepObject: {fileID: 1561970685}
-    buttonText: Weiter
-    voiceLine: {fileID: 8300000, guid: 4d181a03ca4518e4d8217ccc8fad2d49, type: 3}
+    stepTextField: {fileID: 1518836749}
+    germanText: "L\xF6se die Minispiele! Bei Schwierigkeiten schau dir die jeweiligen
+      Hinweise in den Minispielr\xE4umen an."
+    germanButtonText: Weiter
+    germanVoiceLine: {fileID: 8300000, guid: 4d181a03ca4518e4d8217ccc8fad2d49, type: 3}
+    englishText: Solve the mini-games! If you have difficulties, look at the respective
+      hints in the mini-game rooms.
+    englishButtonText: Next
+    englishVoiceLine: {fileID: 8300000, guid: c47050f0271814f4fbe96df1285fb9b5, type: 3}
   - stepObject: {fileID: 1811971165}
-    buttonText: Zum Anfang
-    voiceLine: {fileID: 8300000, guid: c99f23c487dffc94b893822120e07611, type: 3}
+    stepTextField: {fileID: 317709647}
+    germanText: Die Bildteile und das gesamte <b>Bild</b> kannst du am Ende im Hauptraum
+      ansehen. Viel Erfolg!
+    germanButtonText: Zum Anfang
+    germanVoiceLine: {fileID: 8300000, guid: c99f23c487dffc94b893822120e07611, type: 3}
+    englishText: You can view the picture pieces and the complete <b>picture</b>
+      at the end in the main room. Good luck!
+    englishButtonText: To Start
+    englishVoiceLine: {fileID: 8300000, guid: f07fcdac6b483664288e6795196e6b67, type: 3}
   audioSource: {fileID: 1485980301}
 --- !u!114 &1485980293
 MonoBehaviour:
@@ -84585,8 +85383,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "L\xF6se die Minispiele! Bei Schwierigkeiten schau dir die jeweiligen Hinweise
-    in den Minispielr\xE4umen an."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -84774,7 +85571,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Bei Bedarf dr\xFCck auf <b>L\xF6sung</b>,\num die L\xF6sung anzuzeigen."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -90310,12 +91107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Halte den <b>Grip</b>-Knopf, um einen
-
-    Block in die Hand zu nehmen.
-    Lass
-
-    ihn los, um den Block zu platzieren.'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -90883,12 +91675,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Ziel ist, alle 6 <b>versteckten</b> Objekte,
-
-    die <b>auf der Seite
-    angezeigt</b> werden,
-
-    im Bild zu finden.'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -94965,6 +95752,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717770134}
   m_CullTransparentMesh: 1
+--- !u!1 &1717880336
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1717880337}
+  - component: {fileID: 1717880339}
+  - component: {fileID: 1717880338}
+  m_Layer: 5
+  m_Name: Button Back
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1717880337
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717880336}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1810799212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1717880338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717880336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.050980393}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &1717880339
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717880336}
+  m_CullTransparentMesh: 1
 --- !u!1001 &1721223624
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -96597,6 +97459,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744680746}
+  m_CullTransparentMesh: 1
+--- !u!1 &1745445748
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1745445749}
+  - component: {fileID: 1745445751}
+  - component: {fileID: 1745445750}
+  m_Layer: 5
+  m_Name: Button Front
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1745445749
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745445748}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -20}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1453932370}
+  - {fileID: 1799149409}
+  m_Father: {fileID: 1810799212}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1745445750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745445748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b342eb1e41a45ce41b5c7c684a17c465, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 4
+--- !u!222 &1745445751
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1745445748}
   m_CullTransparentMesh: 1
 --- !u!1 &1745927785
 GameObject:
@@ -98370,7 +99309,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen zum Block Puzzle!\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -99890,6 +100829,142 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
     m_Variable: {fileID: 0}
+--- !u!1 &1799149408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1799149409}
+  - component: {fileID: 1799149411}
+  - component: {fileID: 1799149410}
+  m_Layer: 5
+  m_Name: 'Text (TMP) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1799149409
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799149408}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1745445749}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1799149410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799149408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: English
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
+  m_sharedMaterial: {fileID: 4687939059374929122, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1799149411
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799149408}
+  m_CullTransparentMesh: 1
 --- !u!1 &1800358178
 GameObject:
   m_ObjectHideFlags: 0
@@ -100268,6 +101343,308 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1674268716328342803, guid: e1709ae488d68054c86d1dc7b4106d46, type: 3}
+--- !u!1 &1810799211
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1810799212}
+  - component: {fileID: 1810799218}
+  - component: {fileID: 1810799217}
+  - component: {fileID: 1810799216}
+  - component: {fileID: 1810799215}
+  - component: {fileID: 1810799214}
+  - component: {fileID: 1810799213}
+  m_Layer: 5
+  m_Name: EnglishButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1810799212
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1717880337}
+  - {fileID: 1745445749}
+  m_Father: {fileID: 265189091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -50}
+  m_SizeDelta: {x: 150, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1810799213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0908100b30fe0ab4191734ae3261431f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PokeFollowTransform: {fileID: 1745445749}
+  m_PokeFill: {fileID: 1453932370}
+  m_PokeFillMaxSizeX: 150
+  m_PokeFillMaxSizeY: 60
+  m_SmoothingSpeed: 8
+  m_ReturnToInitialPosition: 1
+  m_ApplyIfChildIsTarget: 1
+  m_ClampToMinDistance: 1
+  m_MinDistance: 0.15
+  m_ClampToMaxDistance: 1
+  m_MaxDistance: 0
+--- !u!114 &1810799214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1810799215}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1810799215}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!82 &1810799215
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1810799216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1810799217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
+    m_HighlightedColor: {r: 0.09411765, g: 0.4392157, b: 0.7137255, a: 1}
+    m_PressedColor: {r: 0.34509805, g: 0.6901961, b: 0.9647059, a: 1}
+    m_SelectedColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1745445750}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 755020302}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: SetEnglish
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &1810799218
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1810799211}
+  m_CullTransparentMesh: 0
 --- !u!1 &1811971165
 GameObject:
   m_ObjectHideFlags: 0
@@ -101265,7 +102642,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Viel Erfolg!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -104504,6 +105881,308 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1876905691}
   m_CullTransparentMesh: 1
+--- !u!1 &1879017017
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879017018}
+  - component: {fileID: 1879017024}
+  - component: {fileID: 1879017023}
+  - component: {fileID: 1879017022}
+  - component: {fileID: 1879017021}
+  - component: {fileID: 1879017020}
+  - component: {fileID: 1879017019}
+  m_Layer: 5
+  m_Name: GermanButton
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1879017018
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 145049903}
+  - {fileID: 394769528}
+  m_Father: {fileID: 265189091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 50}
+  m_SizeDelta: {x: 150, y: 60}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1879017019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0908100b30fe0ab4191734ae3261431f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_PokeFollowTransform: {fileID: 394769528}
+  m_PokeFill: {fileID: 1469295828}
+  m_PokeFillMaxSizeX: 150
+  m_PokeFillMaxSizeY: 60
+  m_SmoothingSpeed: 8
+  m_ReturnToInitialPosition: 1
+  m_ApplyIfChildIsTarget: 1
+  m_ClampToMinDistance: 1
+  m_MinDistance: 0.15
+  m_ClampToMaxDistance: 1
+  m_MaxDistance: 0
+--- !u!114 &1879017020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1879017021}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: b319a2e4ff8f5d840b82d8635b645d22, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1879017021}
+          m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+          m_MethodName: PlayOneShot
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 8300000, guid: d14b106713a74b448bcab90869f1706e, type: 3}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!82 &1879017021
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &1879017022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!114 &1879017023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
+    m_HighlightedColor: {r: 0.09411765, g: 0.4392157, b: 0.7137255, a: 1}
+    m_PressedColor: {r: 0.34509805, g: 0.6901961, b: 0.9647059, a: 1}
+    m_SelectedColor: {r: 0.1254902, g: 0.5882353, b: 0.9529412, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 394769529}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 755020302}
+        m_TargetAssemblyTypeName: LanguageManager, Assembly-CSharp
+        m_MethodName: SetGerman
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!222 &1879017024
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879017017}
+  m_CullTransparentMesh: 0
 --- !u!1001 &1879171843
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -105559,8 +107238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Finde die 9 Kartenpaare im\n<b>zuf\xE4llig angeordneten</b> Set.\nViel
-    Erfolg!"
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -108995,9 +110673,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Finde die 6 <b>versteckten</b> Objekte.
-
-    Viel Erfolg!'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -109350,6 +111026,144 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 1416463326631033029, guid: a7c18935a76e657489fa0b247a5b6f0d, type: 3}
+--- !u!1 &1956803568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1956803569}
+  - component: {fileID: 1956803571}
+  - component: {fileID: 1956803570}
+  m_Layer: 5
+  m_Name: 'Text (TMP) '
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1956803569
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956803568}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 394769528}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1956803570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956803568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_text: 'Deutsch
+
+'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
+  m_sharedMaterial: {fileID: 4687939059374929122, guid: fbb7c6a04be6d8341934b839f24b42e1, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_StyleSheet: {fileID: 0}
+  m_TextStyleHashCode: -1183493901
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontSize: 16
+  m_fontSizeBase: 16
+  m_fontWeight: 400
+  m_enableAutoSizing: 0
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
+  m_textAlignment: 65535
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_TextWrappingMode: 1
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_linkedTextComponent: {fileID: 0}
+  parentLinkedComponent: {fileID: 0}
+  m_enableKerning: 1
+  m_ActiveFontFeatures: 6e72656b
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_EmojiFallbackSupport: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_IsTextObjectScaleStatic: 0
+  m_VertexBufferAutoSizeReduction: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_hasFontAssetChanged: 0
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1956803571
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1956803568}
+  m_CullTransparentMesh: 1
 --- !u!1 &1957640318
 GameObject:
   m_ObjectHideFlags: 0
@@ -116318,7 +118132,7 @@ GameObject:
   - component: {fileID: 2072397897}
   - component: {fileID: 2072397898}
   m_Layer: 5
-  m_Name: Versions
+  m_Name: VersionButtons
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116333,7 +118147,7 @@ Transform:
   m_GameObject: {fileID: 2072397896}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 15.425, y: -1.9482, z: -4.0154}
+  m_LocalPosition: {x: 15.425, y: -1.9482, z: -3.511}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -116754,6 +118568,102 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2076097454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2076097455}
+  - component: {fileID: 2076097458}
+  - component: {fileID: 2076097457}
+  - component: {fileID: 2076097456}
+  m_Layer: 5
+  m_Name: PanelOutline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2076097455
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076097454}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 265189091}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2076097456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076097454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 306cc8c2b49d7114eaa3623786fc2126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreLayout: 1
+  m_MinWidth: -1
+  m_MinHeight: -1
+  m_PreferredWidth: -1
+  m_PreferredHeight: -1
+  m_FlexibleWidth: -1
+  m_FlexibleHeight: -1
+  m_LayoutPriority: 1
+--- !u!114 &2076097457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076097454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0.6, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 58bc8d49e10d1bc40813d8974b8b3a5c, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 2
+--- !u!222 &2076097458
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2076097454}
+  m_CullTransparentMesh: 0
 --- !u!1 &2076417056
 GameObject:
   m_ObjectHideFlags: 0
@@ -118873,112 +120783,216 @@ MonoBehaviour:
   storyLines:
   - fragment: 0
     parts:
-    - clip: {fileID: 8300000, guid: 86ed852ad35de3743bf62a3ac3aaf2ba, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: Ich bin mir sicher, dass ich schon einmal hier war.
-      - startTime: 4
-        text: Dieses Haus... Diese Dinge...
-      - startTime: 7.5
-        text: Sie bedeuten mir etwas.
-      - startTime: 10
-        text: "Aber die Erinnerungen sind bruchst\xFCckhaft."
-      - startTime: 13.5
-        text: "Als w\xFCrden sie sich verstecken."
-      - startTime: 16
-        text: Vielleicht kann ich sie wiederfinden...
-      - startTime: 18.5
-        text: wenn ich genauer hinschaue.
-    - clip: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
-      isGrandmotherVoice: 0
-      subtitles:
-      - startTime: 0
-        text: Willkommen in unserem Spiel!
-      - startTime: 2.5
-        text: "Zeig auf Weiter & dr\xFCck mit dem Zeigefinger..."
-      - startTime: 5.1
-        text: "auf den Trigger-Knopf f\xFCr das Tutorial."
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: 86ed852ad35de3743bf62a3ac3aaf2ba, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Ich bin mir sicher, dass ich schon einmal hier war.
+        - startTime: 4
+          text: Dieses Haus... Diese Dinge...
+        - startTime: 7.5
+          text: Sie bedeuten mir etwas.
+        - startTime: 10
+          text: "Aber die Erinnerungen sind bruchst\xFCckhaft."
+        - startTime: 13.5
+          text: "Als w\xFCrden sie sich verstecken."
+        - startTime: 16
+          text: Vielleicht kann ich sie wiederfinden...
+        - startTime: 18.5
+          text: wenn ich genauer hinschaue.
+      english:
+        clip: {fileID: 8300000, guid: a9a8f27ed342e1d469942eec4761ec45, type: 3}
+        subtitles:
+        - startTime: 0
+          text: I am sure that I have been here before.
+        - startTime: 4
+          text: This house... These things...
+        - startTime: 7.5
+          text: They mean something to me.
+        - startTime: 10.2
+          text: But the memories are fragmented.
+        - startTime: 13.2
+          text: As if they are hiding.
+        - startTime: 15.4
+          text: Maybe I can find them again...
+        - startTime: 17.8
+          text: if I look more closely.
+    - isGrandmotherVoice: 0
+      german:
+        clip: {fileID: 8300000, guid: fb3c34bcc73222f4d98661559b8ced78, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Willkommen in unserem Spiel!
+        - startTime: 2.5
+          text: "Zeig auf Weiter & dr\xFCck mit dem Zeigefinger\u2026"
+        - startTime: 5.1
+          text: "auf den Trigger-Knopf f\xFCr das Tutorial."
+      english:
+        clip: {fileID: 8300000, guid: 4bd5b2c77d1ba59468813ae56a2794a5, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Welcome to our game!
+        - startTime: 2
+          text: "Point at Next & press the trigger button\u2026"
+        - startTime: 4.2
+          text: with your index finger for the tutorial.
   - fragment: 1
     parts:
-    - clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: Diese Karten...
-      - startTime: 2.5
-        text: "Mein Mann und ich haben das fr\xFCher oft gespielt."
-      - startTime: 6
-        text: Immer wieder dieselben kleinen Spiele.
-      - startTime: 9.5
-        text: Und er hat sich nach jedem Gewinn gefreut,
-      - startTime: 13
-        text: "als w\xE4re es der Erste."
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: 4c5db3c925227c4428de3678eb6c3a81, type: 3}
+        subtitles:
+        - startTime: 0
+          text: "Diese Karten...\r"
+        - startTime: 2.5
+          text: "Mein Mann und ich haben das fr\xFCher oft gespielt."
+        - startTime: 6
+          text: Immer wieder dieselben kleinen Spiele.
+        - startTime: 9.5
+          text: Und er hat sich nach jedem Gewinn gefreut,
+        - startTime: 13
+          text: "als w\xE4re es der Erste."
+      english:
+        clip: {fileID: 8300000, guid: 8b237b45055ce204ebf94f64af7dc00f, type: 3}
+        subtitles:
+        - startTime: 0
+          text: These cards...
+        - startTime: 2
+          text: My husband and I used to play this often.
+        - startTime: 5.5
+          text: The same little games again and again.
+        - startTime: 9.4
+          text: And after every win, he was happy,
+        - startTime: 12.4
+          text: as if it were the first.
   - fragment: 2
     parts:
-    - clip: {fileID: 8300000, guid: 5e0e5889f8f809f4d95ed480fe69f53f, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: Diese Formen...
-      - startTime: 2.4
-        text: Mein Kind hat stundenlang damit gespielt.
-      - startTime: 5.7
-        text: Alles musste zusammenpassen.
-      - startTime: 8.2
-        text: Alles hatte seinen Platz.
-      - startTime: 10.2
-        text: Ich sehe es noch genau vor mir.
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: 5e0e5889f8f809f4d95ed480fe69f53f, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Diese Formen...
+        - startTime: 2.4
+          text: Mein Kind hat stundenlang damit gespielt.
+        - startTime: 5.7
+          text: Alles musste zusammenpassen.
+        - startTime: 8.2
+          text: Alles hatte seinen Platz.
+        - startTime: 10.2
+          text: Ich sehe es noch genau vor mir.
+      english:
+        clip: {fileID: 8300000, guid: 37cc176cbd03c2e45b5e71bb2f056b48, type: 3}
+        subtitles:
+        - startTime: 0
+          text: These shapes...
+        - startTime: 2
+          text: My child played with them for hours.
+        - startTime: 5.4
+          text: Everything had to fit together.
+        - startTime: 7.8
+          text: Everything had its place.
+        - startTime: 10.1
+          text: I can still see it clearly in front of me.
   - fragment: 3
     parts:
-    - clip: {fileID: 8300000, guid: 7e70e4d7a32fd57479e3de0e4e85e6f3, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: So viele kleine Dinge...
-      - startTime: 3
-        text: Und immer mittendrin dieser kleine Dieb.
-      - startTime: 6.5
-        text: "Er hat st\xE4ndig versucht, etwas vom Tisch zu klauen."
-      - startTime: 9.8
-        text: "Als h\xE4tte er gewusst, dass wir ihn trotzdem lieben w\xFCrden."
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: 7e70e4d7a32fd57479e3de0e4e85e6f3, type: 3}
+        subtitles:
+        - startTime: 0
+          text: So viele kleine Dinge...
+        - startTime: 3
+          text: Und immer mittendrin dieser kleine Dieb.
+        - startTime: 6.5
+          text: "Er hat st\xE4ndig versucht, etwas vom Tisch zu klauen."
+        - startTime: 9.8
+          text: "Als h\xE4tte er gewusst, dass wir ihn trotzdem lieben w\xFCrden."
+      english:
+        clip: {fileID: 8300000, guid: c18064fa951551145ba55412887444e7, type: 3}
+        subtitles:
+        - startTime: 0
+          text: So many little things...
+        - startTime: 2.4
+          text: And always right in the middle, this little thief.
+        - startTime: 6
+          text: He constantly tried to steal something from the table.
+        - startTime: 9.9
+          text: As if he had known that we would love him anyway.
   - fragment: 4
     parts:
-    - clip: {fileID: 8300000, guid: cd585347fd398fc48bec1c52660ebb74, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: Diese Wege...
-      - startTime: 2
-        text: "Fr\xFCher habe ich alles zusammengehalten."
-      - startTime: 5
-        text: "Habe daf\xFCr gesorgt, dass jeder seinen Weg findet."
-      - startTime: 8.5
-        text: Auch wenn ich selbst manchmal nicht wusste, wohin es geht.
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: cd585347fd398fc48bec1c52660ebb74, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Diese Wege...
+        - startTime: 2
+          text: "Fr\xFCher habe ich alles zusammengehalten."
+        - startTime: 5
+          text: "Habe daf\xFCr gesorgt, dass jeder seinen Weg findet."
+        - startTime: 8.5
+          text: Auch wenn ich selbst manchmal nicht wusste, wohin es geht.
+      english:
+        clip: {fileID: 8300000, guid: 03ad5aa815933924e903f4eb49edff9a, type: 3}
+        subtitles:
+        - startTime: 0
+          text: These paths...
+        - startTime: 2
+          text: In the past, I held everything together.
+        - startTime: 5.2
+          text: Made sure that everyone found their way.
+        - startTime: 8.2
+          text: Even when I sometimes did not know where it was going myself.
   - fragment: 5
     parts:
-    - clip: {fileID: 8300000, guid: fd559d3e9660fb148ac50181e1dd9b1d, type: 3}
-      isGrandmotherVoice: 1
-      subtitles:
-      - startTime: 0
-        text: Jetzt ergibt alles Sinn.
-      - startTime: 3
-        text: Wir waren hier.
-      - startTime: 4.8
-        text: Zusammen.
-      - startTime: 6.4
-        text: Ein Leben voller kleiner Momente,
-      - startTime: 9.4
-        text: "die ich fast vergessen h\xE4tte."
-      - startTime: 11.7
-        text: Aber sie sind noch da.
-      - startTime: 13.6
-        text: Und ich erinnere mich.
-    - clip: {fileID: 8300000, guid: 8116d0783b24f8a4a9be49bdf13bae39, type: 3}
-      isGrandmotherVoice: 0
-      subtitles:
-      - startTime: 0
-        text: Gratulation! Du bist am Spielende angekommen.
+    - isGrandmotherVoice: 1
+      german:
+        clip: {fileID: 8300000, guid: fd559d3e9660fb148ac50181e1dd9b1d, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Jetzt ergibt alles Sinn.
+        - startTime: 3
+          text: Wir waren hier.
+        - startTime: 4.8
+          text: Zusammen.
+        - startTime: 6.4
+          text: Ein Leben voller kleiner Momente,
+        - startTime: 9.4
+          text: "die ich fast vergessen h\xE4tte."
+        - startTime: 11.7
+          text: Aber sie sind noch da.
+        - startTime: 13.6
+          text: Und ich erinnere mich.
+      english:
+        clip: {fileID: 8300000, guid: 7feb2e92f8f09b94094019aa10bd976c, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Now everything makes sense.
+        - startTime: 2.4
+          text: We were here.
+        - startTime: 4.3
+          text: Together.
+        - startTime: 5.6
+          text: A life full of little moments,
+        - startTime: 8.2
+          text: that I had almost forgotten.
+        - startTime: 10.6
+          text: But they are still here.
+        - startTime: 12.4
+          text: And I remember.
+    - isGrandmotherVoice: 0
+      german:
+        clip: {fileID: 8300000, guid: 8116d0783b24f8a4a9be49bdf13bae39, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Gratulation! Du bist am Spielende angekommen.
+      english:
+        clip: {fileID: 8300000, guid: 6e9dc7b98af9600478168e4c2f37908e, type: 3}
+        subtitles:
+        - startTime: 0
+          text: Congratulations! You have reached the end of the game.
   disableWhileStoryPlays:
   - {fileID: 1533442957}
   - {fileID: 1558497353}
@@ -119361,7 +121375,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Ziel ist, deine <b>Erinnerung</b> mithilfe \neines <b>Bildes</b> wiederzufinden."
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
