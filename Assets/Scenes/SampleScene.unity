@@ -17782,7 +17782,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Willkommen zum Chain Maze.\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
+  m_text: "Willkommen zum Chain Maze!\nDr\xFCck auf <b>Weiter</b> f\xFCr das Tutorial."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
   m_sharedMaterial: {fileID: 4687939059374929122, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
@@ -69659,7 +69659,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Dr\xFCcke den <b>Trigger</b>-Knopf, um im\ndar\xFCberschwebenden Bereich
+  m_text: "Dr\xFCcke den <b>Trigger</b>-Knopf, um im\ndar\xFCber schwebenden Bereich
     ein\nverstecktes Objekt auszuw\xE4hlen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f675742eaf9c20a4f909d78ee7a14fed, type: 2}
